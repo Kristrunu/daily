@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DUMMY_ENTRY from "./DUMMY_ENTRY";
 import Entry from "./components/Entry/Entry";
 import EntryList from "./components/EntryList/EntryList";
+import LogIn from "./components/LogIn/LogIn";
 
 function App() {
   const [entryList, setEntryList] = useState([]);
@@ -16,7 +17,7 @@ function App() {
 
   /*const getNotes = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/journal");
+    const res = await axios.get("http://localhost:5002/journal");
     setEntryList(res.data);
     console.log(entryList);
   } catch (err) {
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <EntryList entryList={entryList} />
+      <LogIn />
     </div>
   );
 }
