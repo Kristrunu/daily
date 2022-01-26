@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import DUMMY_ENTRY from "./DUMMY_ENTRY";
 import Entry from "./components/Entry/Entry";
+import EntryList from "./components/EntryList/EntryList";
 
 function App() {
   const [entryList, setEntryList] = useState([]);
@@ -25,11 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="entry-list">
-        {entryList.map((entryItem, index) => {
-          return <Entry entry={entryItem} key={index} />;
-        })}
-      </div>
+      <EntryList entryList={entryList} />
     </div>
   );
 }
