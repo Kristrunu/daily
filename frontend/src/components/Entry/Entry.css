@@ -1,27 +1,34 @@
 .entry {
-  background-color: rgb(211, 189, 143);
+  background-color: #fff8f2;
+  color: #303030;
   height: 10em;
   padding: 1em;
-  color: black;
   width: 10em;
   margin: 1em;
   text-decoration: none;
   display: flex;
-  flex-direction: column;
   transition: all ease 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  /* transform: rotate(-6deg); */
 }
 
 .entry:hover {
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+.entry__content {
+  text-align: left;
 }
 
 .entry__title {
-  font-size: larger;
+  /* font-size: larger; */
+  font-family: var(--fontFraktionBold);
+}
+
+.entry__text {
+  font-family: var(--fontFraktionLight);
 }
 
 .entry__date {
   font-size: 3rem;
+  font-family: var(--fontBelleHeavy);
 }

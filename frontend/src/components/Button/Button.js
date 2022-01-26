@@ -1,9 +1,9 @@
+import "./Button.css"
 
-const Button = () => {
+const Button = ({ btnClass, text }) => {
     return (
-        <div>
-           <button className="btn btn-dark">New Entry</button>
-        </div>
+           <button className={`btn ${btnClass}`}>{text}</button>
+        
     )
 }
 

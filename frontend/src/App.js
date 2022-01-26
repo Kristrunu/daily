@@ -2,7 +2,6 @@ import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import DUMMY_ENTRY from "./DUMMY_ENTRY";
-import Entry from "./components/Entry/Entry";
 import EntryList from "./components/EntryList/EntryList";
 
 function App() {
