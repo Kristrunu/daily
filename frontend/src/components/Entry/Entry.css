@@ -1,5 +1,5 @@
 .entry {
-  background-color: rgb(255, 237, 200);
+  background-color: rgb(211, 189, 143);
   height: 10em;
   padding: 1em;
   color: black;
@@ -20,8 +20,8 @@
 
 .entry__title {
   font-size: larger;
-} 
+}
 
 .entry__date {
-    font-size: 3rem;
+  font-size: 3rem;
 }
