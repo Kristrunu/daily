@@ -1,6 +1,6 @@
 .entry {
-  background-color: #fff8f2;
-  color: #303030;
+  background-color: var(--colorPrimary);
+  color: var(--colorDark);
   height: 10em;
   padding: 1em;
   width: 10em;

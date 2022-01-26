@@ -6,8 +6,9 @@ import Button from "../Button/Button";
 const EntryList = ({ entryList }) => {
   return (
       <>
-      <Button btnClass="btn-dark plus-icon" text="New Entry" />
-      <Button btnClass="btn-light user-icon" text="Username" />
+      <h1 className="logo">DAILY</h1>
+      <Button btnClass="btn btn-dark plus-icon" text="New Entry" />
+      <Button btnClass="btn btn-light user-icon" text="Username" />
       <div className="entry-list">
         {entryList.map((entryItem, index) => {
           return <Entry entry={entryItem} key={index} />;
