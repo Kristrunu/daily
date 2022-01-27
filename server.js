@@ -1,18 +1,27 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
+
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-require("dotenv").config();
 
-
-
-
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
+
+app.post("/name", (req, res) => {
+  if(req.body.name) {
+    return res.json({name: req.body.name})
+  } else {
+    return res.status(400).json({error: "No name provided"});
+  }
+});
+
 
 app.get("/journal", (req, res) => {
   const journalEntry = [
