@@ -8,7 +8,6 @@ const DUMMY_ENTRY = [
     date: "04",
     title: "My day was not great",
     text: "Dui sit morbi amet ac tellus faucibus elit gravida iaculis. Semper fermentum ipsum tortor vel donec duis. Accumsan, facilisi etiam viverra in egestas. Euismod orci arcu neque turpis sit metus. In vel egestas interdum accumsan.",
-
   },
   {
     date: "07",
