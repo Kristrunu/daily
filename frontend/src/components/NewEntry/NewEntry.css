@@ -1,0 +1,20 @@
+.new-entry {
+    background-color: var(--colorDark);
+    color: var(--colorPrimary);
+}
+
+.entry-date {
+    display: flex;
+    align-items: baseline;
+    margin-left: 8rem;
+}
+
+.icon-edit-icon {
+    border: none;
+}
+
+.icon-edit-icon:before {
+    content: "\e900";
+    color: var(--colorPrimary);
+    font-size: xx-large;
+  }
