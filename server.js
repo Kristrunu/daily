@@ -6,6 +6,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
+const authRoute = require("./routes/auth");
+
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
@@ -21,6 +23,8 @@ app.post("/name", (req, res) => {
     return res.status(400).json({error: "No name provided"});
   }
 });
+
+app.use('/api/auth', authRoute);
 
 
 app.get("/journal", (req, res) => {
