@@ -1,27 +1,28 @@
 .entry {
-  background-color: #fff8f2;
-  color: #303030;
-  height: 10em;
-  padding: 1em;
-  width: 10em;
-  margin: 1em;
+  background-color: var(--colorPrimary);
+  color: var(--colorDark);
   text-decoration: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   transition: all ease 0.3s;
 }
 
 .entry:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   cursor: pointer;
 }
 
 .entry__content {
   text-align: left;
+  width: 60%;
 }
 
 .entry__title {
-  /* font-size: larger; */
+  font-size: larger;
   font-family: var(--fontFraktionBold);
+  margin-bottom: .5rem;
 }
 
 .entry__text {
@@ -31,4 +32,16 @@
 .entry__date {
   font-size: 3rem;
   font-family: var(--fontBelleHeavy);
+  width: 40%;
+  text-align: right;
+  padding: 1rem 2rem;
+}
+
+.entry:nth-child(even) .entry__date {
+  order: 5;
+  text-align: left;
+}
+
+.entry:nth-child(even) .entry__content {
+  text-align: right;
 }

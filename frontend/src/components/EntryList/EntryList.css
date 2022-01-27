@@ -1,0 +1,23 @@
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 5rem;
+  text-align: left;
+  padding-left: 8rem;
+  color: var(--colorDark);
+}
+
+.btns {
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.btn-dark {
+  margin-right: 2rem;
+}

@@ -1,20 +1,31 @@
 import "./LogIn.css";
-
+import Button from "../Button/Button";
 import React from 'react'
 
 function LogIn() {
   return (
-    <form>
-        <h2>Login</h2>
+    <form className="login-form">
+        <h2 className="login-title">Log in</h2>
         {/* ERROR! */}
-        <div className="form-group">
-          <label htmlFor="email"> Email </label>
+        <div className="input-form">
+          <label htmlFor="email"> Email Address </label>
           <input type="email" name="email" id="email"/>
         </div>
-        <div className="form-group">
-        <label htmlFor="password"> Password </label>
-        <input type="password" name="password" id="password"/>
+
+        <div className="input-form">
+          <label htmlFor="password"> Password </label>
+          <input type="password" name="password" id="password"/>
         </div>
+
+        <div className="info-links">
+          <a className="forgot-pass">Forgot Password</a>
+          <a className="sign-up">No account? Sign up here!</a>
+        </div>
+        
+        <div className="login-btn">
+          <Button btnClass="btn-dark" text="Log In" />
+        </div>
+
     </form>
   )
 }

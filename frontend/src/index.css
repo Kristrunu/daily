@@ -6,23 +6,34 @@
 @font-face {
   font-family: PPFraktionSans-Light;
   src: url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.eot"); /* IE9 Compat Modes */
-  src: url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-       url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.woff") format("woff"), /* Modern Browsers */
-       url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.ttf")  format("truetype"); /* Safari, Android, iOS */
+  src: url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("/public/fonts/pp-fraktionSans/PPFraktionSans-Light.ttf")
+      format("truetype"); /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: PPFraktionSans-Bold;
   src: url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.eot"); /* IE9 Compat Modes */
-  src: url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-       url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.woff") format("woff"), /* Modern Browsers */
-       url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.ttf")  format("truetype"); /* Safari, Android, iOS */
+  src: url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("/public/fonts/pp-fraktionSans/PPFraktionSans-Bold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
 }
 
 :root {
   --fontFraktionBold: "PPFraktionSans-Bold", "Helvetica Neue", sans-serif;
   --fontFraktionLight: "PPFraktionSans-Light", "Helvetica Neue", sans-serif;
   --fontBelleHeavy: "BelledeMai-Heavy", "Helvetica Neue", serif;
+  --colorPrimary: #FFF8F2;
+  --colorDark: #303030;
+  --colorWhite: #FFFDFB;
 }
 
 html,
@@ -32,6 +43,11 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--fontBelleHeavy);
 }
 
 body {

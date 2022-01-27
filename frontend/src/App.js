@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DUMMY_ENTRY from "./DUMMY_ENTRY";
 import EntryList from "./components/EntryList/EntryList";
 import LogIn from "./components/LogIn/LogIn";
+import NewEntry from "./components/NewEntry/NewEntry";
 
 function App() {
   const [entryList, setEntryList] = useState([]);
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <EntryList entryList={entryList} />
       <LogIn />
+      <NewEntry />
     </div>
   );
 }

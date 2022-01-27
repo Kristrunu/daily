@@ -1,0 +1,72 @@
+/*<form> hugging all content*/
+.login-form {
+    width: 75%;
+    margin: 0 auto;
+    color: var(--colorDark);
+    
+}
+
+/* Log In - Title */
+h2 {
+    font-size: 3rem;
+    /*margin-right: 19rem;*/ 
+    margin-bottom: 4rem;
+}
+
+
+/* Input form <div>, email and password */
+.input-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 0.1rem;
+    padding: 0.5rem;
+    text-align: left;
+    font-family: var(--fontFraktionBold);
+}
+
+
+/* Forgot password & No account, Sign up! */
+.info-links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    font-family: var(--fontFraktionLight);
+    justify-content: center;
+    
+}
+
+/* Forgot password - link */
+.forgot-pass{
+    width: 20%;
+    text-decoration: underline;
+}
+
+/* No account? Sign up here - link */
+.sign-up{
+    width: 27%;
+    text-decoration: underline;
+}
+
+/*Log In button*/
+.login-btn {
+    display: flex;
+    justify-content: end;
+    margin-right: 20rem;
+    width: 73%;
+    cursor: pointer;
+} /*Láta takkann festast hægra megin í línu við input fields*/
+
+
+
+
+
+/*
+.btn-dark {
+    margin-right: 2rem;   
+}
+*/
