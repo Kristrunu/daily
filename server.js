@@ -1,7 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 5002;
 const cors = require("cors");
+const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+require("dotenv").config();
+
+
+
 
 app.use(cors());
 
@@ -19,12 +24,24 @@ app.get("/journal", (req, res) => {
     {
       title: "No",
       text: "Iceland",
-      date: "Reykjavík",
+      date: "Reykjavík"
     },
   ];
   res.json(journalEntry);
 });
 
-app.listen(port, () => {
-  console.log(`App running on port http://localhost:${port}`);
-});
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("Connected to database");
+
+    app.listen(process.env.PORT, () => {
+      console.log(`Server running on port ${process.env.PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+
