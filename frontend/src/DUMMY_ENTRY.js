@@ -7,7 +7,7 @@ const DUMMY_ENTRY = [
   {
     date: "04",
     title: "My day was not great",
-    text: "A whole bunch of text here",
+    text: "A whole bunch of text here and more ",
   },
   {
     date: "07",
