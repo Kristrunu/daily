@@ -7,8 +7,10 @@ const EntryList = ({ entryList }) => {
   return (
       <>
       <h1 className="logo">DAILY</h1>
-      <Button btnClass="btn btn-dark plus-icon" text="New Entry" />
-      <Button btnClass="btn btn-light user-icon" text="Username" />
+      <div className="btns">
+      <Button btnClass="btn-dark plus-icon" text="New Entry" />
+      <Button btnClass="btn-light user-icon" text="Username" />
+      </div>
       <div className="entry-list">
         {entryList.map((entryItem, index) => {
           return <Entry entry={entryItem} key={index} />;
