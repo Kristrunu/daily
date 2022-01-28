@@ -5,12 +5,14 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
+const cookieParser = require("cookie-parser"); 
 
 const authRoute = require("./routes/auth");
 
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
+app.use(cookieParser());
 
 app.get("/api", (req, res) => {
   res.send("Hello world");
