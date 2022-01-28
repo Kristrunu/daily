@@ -7,9 +7,9 @@
 }
 
 /* Log In - Title */
-h2 {
+.login-title {
   font-size: 3rem;
-  margin-right: 17rem;
+  margin-right: 20rem;
   margin-bottom: 4rem;
 }
 
@@ -51,14 +51,14 @@ h2 {
 
 /* Forgot password - link */
 .forgot-pass {
-  width: 20%;
+  width: 24%;
   text-decoration: underline;
   color: var(--colorDark);
 }
 
 /* No account? Sign up here - link */
 .sign-up {
-  width: 27%;
+  width: 29%;
   text-decoration: underline;
   color: var(--colorDark);
 }
@@ -68,7 +68,7 @@ h2 {
   display: flex;
   justify-content: end;
   margin-right: 20rem;
-  width: 77%;
+  width: 64%;
   padding: 5rem;
 }
 
