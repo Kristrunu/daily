@@ -7,6 +7,4 @@ const Button = ({ btnClass, text }) => {
     )
 }
 
-
-
 export default Button
