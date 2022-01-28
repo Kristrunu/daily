@@ -6,20 +6,34 @@
     color: var(--colorDark); 
 }
 
+.signup-title{
+  font-size: 3rem;
+  margin-right: 17rem;
+  margin-bottom: 4rem;
+}
+
 .log-in-link {
   color: var(--colorDark);
   padding-left: .5rem;
+  margin-right: 0rem;
+
 }
 
 .signup-btn {
     display: flex;
     justify-content: end;
     margin-right: 20rem;
-    width: 77%;
+    width: 63%;
     padding: 5rem;
   }
 
-  .info-links {
-      display: flex;
-      align-items: baseline;
+  .links {
+    display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 6.8rem;
+  font-family: var(--fontFraktionLight);
+  justify-content: center;
+  align-items: baseline;
   }

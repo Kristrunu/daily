@@ -32,7 +32,7 @@ function LogIn() {
             />
         </div>
 
-        <div className="info-links">
+        <div className="info-link">
           <a href="#" className="forgot-pass">Forgot Password</a>
           <a href="#" className="sign-up">No account? Sign up here!</a>
         </div>

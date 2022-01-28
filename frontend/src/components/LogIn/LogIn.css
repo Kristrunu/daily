@@ -31,7 +31,7 @@
   border-radius: 4px;
   margin: 0 auto;
   border-style: none;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #CED4DA;
 }
 
 ::placeholder {
@@ -39,7 +39,7 @@
 }
 
 /* Forgot password & No account, Sign up! */
-.info-links {
+.info-link {
   display: flex;
   flex-direction: row;
   width: 100%;
