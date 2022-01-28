@@ -79,6 +79,7 @@
 
 .cancel {
   border: 1px solid var(--colorPrimary);
+  margin-right: 2rem;
 }
 
 .icon-edit-icon:before {
