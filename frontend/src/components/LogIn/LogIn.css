@@ -13,6 +13,12 @@ h2 {
     margin-bottom: 4rem;
 }
 
+.login-title {
+    text-align: left;
+    margin-left: 17.5rem;
+    
+}
+
 
 /* Input form <div>, email and password */
 .input-form{
@@ -25,7 +31,6 @@ h2 {
     text-align: left;
     font-family: var(--fontFraktionBold);
 }
-
 
 /* Forgot password & No account, Sign up! */
 .info-links{
@@ -44,12 +49,14 @@ h2 {
 .forgot-pass{
     width: 20%;
     text-decoration: underline;
+    color: var(--colorDark)
 }
 
 /* No account? Sign up here - link */
 .sign-up{
     width: 27%;
     text-decoration: underline;
+    color: var(--colorDark)
 }
 
 /*Log In button*/

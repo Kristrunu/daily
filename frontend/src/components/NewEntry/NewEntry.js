@@ -7,7 +7,7 @@ const NewEntry = () => {
     <form className="new-entry">
 
         <div className="entry-date">
-            <h2>Today</h2> <Button btnClass="btn-dark icon-edit-icon"/>
+            <h2>Today</h2> <Button btnClass="btn-icon icon-edit-icon"/>
         </div>
 <div className="all-input">
         <div className="morning">
@@ -33,12 +33,12 @@ const NewEntry = () => {
                 <input className="entry-input" type="text" name="journal-input" id="journal-input"/>
             </div>
             <div className="mood">
-                <label htmlFor="text"> My Mood </label>
+                <label className="entry-label" htmlFor="text"> My Mood </label>
                     <div className="mood-picker">
-                    <Button btnClass="btn-dark icon-happiest-emoji"/>
-                    <Button btnClass="btn-dark icon-happy-emoji"/>
-                    <Button btnClass="btn-dark icon-sad-emoji"/>
-                    <Button btnClass="btn-dark icon-saddest-emoji"/>
+                    <Button btnClass="btn-icon icon-happiest-emoji"/>
+                    <Button btnClass="btn-icon icon-happy-emoji"/>
+                    <Button btnClass="btn-icon icon-sad-emoji"/>
+                    <Button btnClass="btn-icon icon-saddest-emoji"/>
                     </div>
             </div>
             <a className="add-img" href="#">Add Images From The Day</a>

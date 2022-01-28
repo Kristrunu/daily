@@ -6,7 +6,7 @@ function LogIn() {
   return (
     <form className="login-form">
         <h2 className="login-title">Log in</h2>
-        {/* ERROR! */}
+       
         <div className="input-form">
           <label htmlFor="email"> Email Address </label>
           <input type="email" name="email" id="email"/>
@@ -18,8 +18,8 @@ function LogIn() {
         </div>
 
         <div className="info-links">
-          <a className="forgot-pass">Forgot Password</a>
-          <a className="sign-up">No account? Sign up here!</a>
+          <a href="#" className="forgot-pass">Forgot Password</a>
+          <a href="#" className="sign-up">No account? Sign up here!</a>
         </div>
         
         <div className="login-btn">

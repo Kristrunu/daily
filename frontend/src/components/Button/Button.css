@@ -14,9 +14,17 @@
 .btn-light {
   background-color: var(--colorPrimary);
   color: var(--colorDark);
-  border: 1px solid #303030;
+  border: 1px solid var(--colorDark);
 }
 
-.btn:hover {
-  transform: scale(1.1);
+.btn-dark:hover {
+  background-color: var(--colorPrimary);
+  color: var(--colorDark);
+  border: 1px solid var(--colorDark);
+}
+
+.btn-light:hover {
+  background-color: var(--colorDark);
+  color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
 }
