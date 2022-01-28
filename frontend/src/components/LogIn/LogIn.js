@@ -4,17 +4,32 @@ import React from 'react'
 
 function LogIn() {
   return (
+  <div className="container">
+
     <form className="login-form">
+
         <h2 className="login-title">Log in</h2>
        
         <div className="input-form">
           <label htmlFor="email"> Email Address </label>
-          <input type="email" name="email" id="email"/>
+            <input 
+              className="input" 
+              type="email" 
+              name="email" 
+              id="email" 
+              placeholder="Email"
+            />
         </div>
 
         <div className="input-form">
           <label htmlFor="password"> Password </label>
-          <input type="password" name="password" id="password"/>
+            <input 
+              className="input" 
+              type="password" 
+              name="password" 
+              id="password" 
+              placeholder="Password"
+            />
         </div>
 
         <div className="info-links">
@@ -27,6 +42,7 @@ function LogIn() {
         </div>
 
     </form>
+  </div>
   )
 }
 
