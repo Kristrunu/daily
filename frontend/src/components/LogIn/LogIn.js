@@ -6,7 +6,7 @@ function LogIn() {
   return (
     <form className="login-form">
         <h2 className="login-title">Log in</h2>
-        {/* ERROR! */}
+       
         <div className="input-form">
           <label htmlFor="email"> Email Address </label>
           <input type="email" name="email" id="email"/>

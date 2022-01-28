@@ -17,11 +17,11 @@
 }
 
 .entry-label {
-    margin-bottom: .5rem;
+  margin-bottom: .7rem;
 }
 
 .entry-input {
-    padding: 3rem;
+  padding: 3rem;
 }
 
 .morning {
@@ -30,7 +30,7 @@
 }
 
 .sun-svg {
-    padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .focus,
@@ -46,7 +46,7 @@
 }
 
 .moon-svg {
-    padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .journal-input,
@@ -60,18 +60,25 @@
   display: flex;
 }
 
+.btn-icon {
+  padding-right: 1rem;
+}
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
 .add-img {
-    color: var(--colorPrimary);
+  color: var(--colorPrimary);
 }
 
 .c-s-buttons {
-    display: flex;
-    justify-content: end;
-    padding: 5rem 0 2rem 0;
+  display: flex;
+  justify-content: end;
+  padding: 5rem 0 2rem 0;
 }
 
 .cancel {
-    border: 1px solid var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
 }
 
 .icon-edit-icon:before {
