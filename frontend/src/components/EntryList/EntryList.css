@@ -5,6 +5,12 @@
   margin: 0 auto;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
 .logo {
   font-size: 5rem;
   text-align: left;
@@ -16,8 +22,13 @@
   display: flex;
   justify-content: end;
   margin-right: 2rem;
+  max-height: 46px;
 }
 
 .btn-entry {
   margin-right: 2rem;
+}
+
+.icon-plus-icon:hover {
+    color: var(--colorDark);
 }
