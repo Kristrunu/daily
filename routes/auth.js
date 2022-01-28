@@ -4,6 +4,7 @@ const User = require('../models/User')
 const bcrypt = require('bcryptjs');
 const validateRegisterInput = require('../validation/registerValidation')
 const jwt = require("jsonwebtoken");
+const requiresAuth = require("../middleware/permissions");
 
 // @route   GET /api/auth/test
 // @desc    Test the auth route
@@ -103,6 +104,18 @@ router.post("/login", async (req,res) => {
   }
 });
 
+
+// @route   GET /api/auth/current
+// @desc    Currently Authed User
+// @access  Private
+
+router.get("/current", requiresAuth, (req,res) => {
+  if(!req.user) {
+    return res.status(401).send("Unauthorized");
+  }
+
+  return res.json(req.user);
+});
 
 
 module.exports = router; 
