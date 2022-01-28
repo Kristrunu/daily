@@ -4,10 +4,14 @@
   font-family: var(--fontFraktionLight);
 }
 
-.entry-date {
+.date-container {
   display: flex;
   align-items: baseline;
-  margin-left: 8rem;
+}
+
+.entry-headline {
+    font-size: 3rem;
+    margin-left: 8rem;
 }
 
 .all-input {
@@ -61,6 +65,7 @@
 .btn-icon {
   padding-right: 1rem;
 }
+
 .btn-icon:hover {
   transform: scale(1.1);
 }

@@ -38,7 +38,7 @@ function LogIn() {
         </div>
         
         <div className="login-btn">
-          <Button btnClass="btn-dark" text="Log In" />
+          <Button btnClass="btn-dark log-in-btn icon-login-icon" text="Log In" />
         </div>
 
     </form>

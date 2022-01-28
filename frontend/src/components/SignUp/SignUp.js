@@ -59,7 +59,7 @@ const SignUp = () => {
         </div>
 
         <div className="signup-btn">
-          <Button btnClass="btn-dark" text="Sign Up" />
+          <Button btnClass="btn-dark icon-login-icon" text="Sign Up" />
         </div>
       </form>
     </div>

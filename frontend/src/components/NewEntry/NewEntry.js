@@ -6,8 +6,8 @@ const NewEntry = () => {
   return(
     <form className="new-entry">
 
-        <div className="entry-date">
-            <h2>Today</h2> <Button btnClass="btn-icon icon-edit-icon"/>
+        <div className="date-container">
+            <h2 className="entry-headline">New Entry</h2>
         </div>
 <div className="all-input">
         <div className="morning">
@@ -39,8 +39,8 @@ const NewEntry = () => {
             </div>
             <a className="add-img" href="#">Add Images From The Day</a>
             <div className="c-s-buttons">
-                    <Button btnClass="btn-dark cancel" text="Cancel"/>
-                    <Button btnClass="btn-light save" text="Save Entry"/>
+                    <Button btnClass="btn-dark cancel icon-x-icon" text="Cancel"/>
+                    <Button btnClass="btn-light save icon-save-icon" text="Save Entry"/>
             </div>
         </div>
 </div>

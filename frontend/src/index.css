@@ -104,11 +104,13 @@ body {
 }
 .icon-login-icon:before {
   content: "\e903";
-  color: #fff8f2;
+  margin-right: .5rem;
+  font-size: 1.2rem;
 }
 .icon-plus-icon:before {
   content: "\e905";
-  color: #fff8f2;
+  margin-right: .5rem;
+  font-size: 1rem;
 }
 .icon-sad-emoji:before {
   content: "\e906";
@@ -120,6 +122,8 @@ body {
 }
 .icon-save-icon:before {
   content: "\e908";
+  margin-right: .5rem;
+  font-size: 1rem;
 }
 .icon-sun-icon:before {
   content: "\e909";
@@ -127,8 +131,11 @@ body {
 }
 .icon-user-icon:before {
   content: "\e90a";
+  margin-right: .5rem;
+  font-size: 1rem;
 }
 .icon-x-icon:before {
   content: "\e90b";
-  color: #fff8f2;
+  margin-right: .5rem;
+  font-size: 1rem;
 }
