@@ -27,22 +27,6 @@ app.post("/name", (req, res) => {
 app.use('/api/auth', authRoute);
 
 
-app.get("/journal", (req, res) => {
-  const journalEntry = [
-    {
-      title: "Yes",
-      text: "Iceland",
-      date: "Iceland",
-    },
-    {
-      title: "No",
-      text: "Iceland",
-      date: "Reykjavík"
-    },
-  ];
-  res.json(journalEntry);
-});
-
 
 mongoose
   .connect(process.env.MONGO_URI)
