@@ -1,0 +1,25 @@
+
+/*<form> hugging all content*/
+.signup-form {
+    max-width: 1100px;
+    padding: 50px;
+    color: var(--colorDark); 
+}
+
+.log-in-link {
+  color: var(--colorDark);
+  padding-left: .5rem;
+}
+
+.signup-btn {
+    display: flex;
+    justify-content: end;
+    margin-right: 20rem;
+    width: 77%;
+    padding: 5rem;
+  }
+
+  .info-links {
+      display: flex;
+      align-items: baseline;
+  }
