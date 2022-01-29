@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--colorPrimary);
+  z-index: 10;
 }
 
 .daily-h1 {
@@ -25,7 +26,7 @@
 
 .btns {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 8rem;
   max-height: 46px;
 }
@@ -33,4 +34,3 @@
 .btn-entry {
   margin-right: 2rem;
 }
-

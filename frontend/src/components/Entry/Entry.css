@@ -17,7 +17,7 @@
 
 .entry__content {
   text-align: left;
-  width: 60%;
+  width: 40%;
 }
 
 .entry__title {
@@ -33,9 +33,9 @@
 .entry__date {
   font-size: 3rem;
   font-family: var(--fontBelleHeavy);
-  width: 40%;
+  width: 30%;
   text-align: right;
-  padding: 1rem 2rem;
+  padding: 1rem 0 1rem 4rem;
 }
 
 .entry:nth-child(even) .entry__date {
