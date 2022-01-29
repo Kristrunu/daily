@@ -10,8 +10,8 @@
 }
 
 .entry-headline {
-    font-size: 3rem;
-    margin-left: 8rem;
+  font-size: 3rem;
+  margin-left: 8rem;
 }
 
 .all-input {
@@ -21,7 +21,7 @@
 }
 
 .entry-label {
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 .entry-input {
@@ -76,7 +76,7 @@
 
 .c-s-buttons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 5rem 0 2rem 0;
 }
 
