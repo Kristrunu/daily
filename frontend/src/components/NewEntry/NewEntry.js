@@ -37,7 +37,7 @@ const NewEntry = () => {
                     <Button btnClass="btn-icon icon-saddest-emoji"/>
                     </div>
             </div>
-            <a className="add-img" href="#">Add Images From The Day</a>
+            <a className="add-img" href="/">Add Images From The Day</a>
             <div className="c-s-buttons">
                     <Button btnClass="btn-dark cancel icon-x-icon" text="Cancel"/>
                     <Button btnClass="btn-light save icon-save-icon" text="Save Entry"/>
