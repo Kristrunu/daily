@@ -7,7 +7,9 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const cookieParser = require("cookie-parser"); 
 
+// import Routes 
 const authRoute = require("./routes/auth");
+const EntryRoute = require("./routes/entry");
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -18,6 +20,8 @@ app.get("/api", (req, res) => {
   res.send("Hello world");
 });
 
+
+
 app.post("/name", (req, res) => {
   if(req.body.name) {
     return res.json({name: req.body.name})
@@ -27,7 +31,7 @@ app.post("/name", (req, res) => {
 });
 
 app.use('/api/auth', authRoute);
-
+app.use("/api/entry", EntryRoute);
 
 
 mongoose
