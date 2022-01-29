@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--colorPrimary);
+  z-index: 10;
 }
 
 .daily-h1 {
