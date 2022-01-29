@@ -83,6 +83,7 @@
 .cancel {
   border: 1px solid var(--colorPrimary);
   margin-right: 2rem;
+<<<<<<< HEAD
 }
 
 .icon-edit-icon:before {
@@ -115,3 +116,6 @@
   font-size: xx-large;
 }
 
+=======
+}
+>>>>>>> c79937206f816b44ec0dbc07982b25dc0b8ed863
