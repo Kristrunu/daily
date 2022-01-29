@@ -136,7 +136,7 @@ router.get("/current", requiresAuth, (req,res) => {
 router.put("/logout", requiresAuth, async(req,res) => {
   try {
     res.clearCookie("access-token");
-    return res.json( {success: true});
+    return res.json( {success: true} );
 
   } catch(err) {
     console.log(err)
