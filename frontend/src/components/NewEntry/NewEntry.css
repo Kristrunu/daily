@@ -83,4 +83,39 @@
 .cancel {
   border: 1px solid var(--colorPrimary);
   margin-right: 2rem;
+<<<<<<< HEAD
 }
+
+.icon-edit-icon:before {
+  content: "\e900";
+  color: var(--colorPrimary);
+  font-size: xx-large;
+}
+
+.icon-happiest-emoji:before {
+  content: "\e901";
+  color: var(--colorPrimary);
+  font-size: xx-large;
+}
+
+.icon-happy-emoji:before {
+  content: "\e902";
+  color: var(--colorPrimary);
+  font-size: xx-large;
+}
+
+.icon-sad-emoji:before {
+  content: "\e906";
+  color: var(--colorPrimary);
+  font-size: xx-large;
+}
+
+.icon-saddest-emoji:before {
+  content: "\e907";
+  color: var(--colorPrimary);
+  font-size: xx-large;
+}
+
+=======
+}
+>>>>>>> c79937206f816b44ec0dbc07982b25dc0b8ed863
