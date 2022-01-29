@@ -97,10 +97,12 @@ body {
 .icon-happiest-emoji:before {
   content: "\e901";
   color: #fff8f2;
+  font-size: 2rem;
 }
 .icon-happy-emoji:before {
   content: "\e902";
   color: #fff8f2;
+  font-size: 2rem;
 }
 .icon-login-icon:before {
   content: "\e903";
@@ -115,10 +117,12 @@ body {
 .icon-sad-emoji:before {
   content: "\e906";
   color: #fff8f2;
+  font-size: 2rem;
 }
 .icon-saddest-emoji:before {
   content: "\e907";
   color: #fff8f2;
+  font-size: 2rem;
 }
 .icon-save-icon:before {
   content: "\e908";
