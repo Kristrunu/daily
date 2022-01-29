@@ -4,10 +4,14 @@
   font-family: var(--fontFraktionLight);
 }
 
-.entry-date {
+.date-container {
   display: flex;
   align-items: baseline;
-  margin-left: 8rem;
+}
+
+.entry-headline {
+    font-size: 3rem;
+    margin-left: 8rem;
 }
 
 .all-input {
@@ -29,8 +33,10 @@
   margin-left: 8rem;
 }
 
-.sun-svg {
+.sun-svg,
+.moon-svg {
   padding-bottom: 1.5rem;
+  font-size: 4rem;
 }
 
 .focus,
@@ -43,10 +49,6 @@
 .evening {
   width: 25%;
   margin-right: 8rem;
-}
-
-.moon-svg {
-  padding-bottom: 1.5rem;
 }
 
 .journal-input,
@@ -63,6 +65,7 @@
 .btn-icon {
   padding-right: 1rem;
 }
+
 .btn-icon:hover {
   transform: scale(1.1);
 }
@@ -79,34 +82,5 @@
 
 .cancel {
   border: 1px solid var(--colorPrimary);
-}
-
-.icon-edit-icon:before {
-  content: "\e900";
-  color: var(--colorPrimary);
-  font-size: xx-large;
-}
-
-.icon-happiest-emoji:before {
-  content: "\e901";
-  color: var(--colorPrimary);
-  font-size: xx-large;
-}
-
-.icon-happy-emoji:before {
-  content: "\e902";
-  color: var(--colorPrimary);
-  font-size: xx-large;
-}
-
-.icon-sad-emoji:before {
-  content: "\e906";
-  color: var(--colorPrimary);
-  font-size: xx-large;
-}
-
-.icon-saddest-emoji:before {
-  content: "\e907";
-  color: var(--colorPrimary);
-  font-size: xx-large;
+  margin-right: 2rem;
 }

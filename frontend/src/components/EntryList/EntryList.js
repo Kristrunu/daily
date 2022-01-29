@@ -5,11 +5,13 @@ import Button from "../Button/Button";
 const EntryList = ({ entryList }) => {
   return (
       <>
-      <h1 className="logo">DAILY</h1>
-      <div className="btns">
-      <Button btnClass="btn-dark plus-icon" text="New Entry" />
-      <Button btnClass="btn-light user-icon" text="Log Out" />
-      </div>
+    <div className="header">
+        <h1 className="daily-h1">DAILY</h1>
+        <div className="btns">
+        <Button btnClass="btn-dark btn-entry icon-plus-icon" text="New Entry" />
+        <Button btnClass="btn-light icon-user-icon" text="Log Out" />
+        </div>
+    </div>
       <div className="entry-list">
         {entryList.map((entryItem, index) => {
           return <Entry entry={entryItem} key={index} />;

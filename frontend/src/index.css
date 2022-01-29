@@ -27,13 +27,40 @@
       format("truetype"); /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: "icomoon";
+  src: url("/public/icons/icomoon.eot?beaea5");
+  src: url("/public/icons/icomoon.eot?beaea5#iefix") format("embedded-opentype"),
+    url("/public/icons/icomoon.ttf?beaea5") format("truetype"),
+    url("/public/icons/icomoon.woff?beaea5") format("woff"),
+    url("/public/icons/icomoon.svg?beaea5#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   --fontFraktionBold: "PPFraktionSans-Bold", "Helvetica Neue", sans-serif;
   --fontFraktionLight: "PPFraktionSans-Light", "Helvetica Neue", sans-serif;
   --fontBelleHeavy: "BelledeMai-Heavy", "Helvetica Neue", serif;
-  --colorPrimary: #FFF8F2;
+  --colorPrimary: #fff8f2;
   --colorDark: #303030;
-  --colorWhite: #FFFDFB;
+  --colorWhite: #fffdfb;
 }
 
 html,
@@ -43,6 +70,8 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-color: var(--colorPrimary);
 }
 
 h1,
@@ -55,4 +84,62 @@ body {
   font-family: var(--fontFraktionThin);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-moon-icon:before {
+  content: "\e904";
+  color: #fff8f2;
+}
+.icon-edit-icon:before {
+  content: "\e900";
+  color: #fffdfb;
+}
+.icon-happiest-emoji:before {
+  content: "\e901";
+  color: #fff8f2;
+  font-size: 2rem;
+}
+.icon-happy-emoji:before {
+  content: "\e902";
+  color: #fff8f2;
+  font-size: 2rem;
+}
+.icon-login-icon:before {
+  content: "\e903";
+  margin-right: .5rem;
+  font-size: 1.2rem;
+}
+.icon-plus-icon:before {
+  content: "\e905";
+  margin-right: .5rem;
+  font-size: 1rem;
+}
+.icon-sad-emoji:before {
+  content: "\e906";
+  color: #fff8f2;
+  font-size: 2rem;
+}
+.icon-saddest-emoji:before {
+  content: "\e907";
+  color: #fff8f2;
+  font-size: 2rem;
+}
+.icon-save-icon:before {
+  content: "\e908";
+  margin-right: .5rem;
+  font-size: 1rem;
+}
+.icon-sun-icon:before {
+  content: "\e909";
+  color: #fff8f2;
+}
+.icon-user-icon:before {
+  content: "\e90a";
+  margin-right: .5rem;
+  font-size: 1rem;
+}
+.icon-x-icon:before {
+  content: "\e90b";
+  margin-right: .5rem;
+  font-size: 1rem;
 }

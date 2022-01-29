@@ -5,6 +5,7 @@ import DUMMY_ENTRY from "./DUMMY_ENTRY";
 import EntryList from "./components/EntryList/EntryList";
 import LogIn from "./components/LogIn/LogIn";
 import NewEntry from "./components/NewEntry/NewEntry";
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
   const [entryList, setEntryList] = useState([]);
@@ -30,6 +31,7 @@ function App() {
       <EntryList entryList={entryList} />
       <LogIn />
       <NewEntry />
+      <SignUp />
     </div>
   );
 }

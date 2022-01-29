@@ -1,0 +1,33 @@
+.signup-title {
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+
+.links {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  font-family: var(--fontFraktionLight);
+  justify-content: right;
+  align-items: baseline;
+}
+
+.log-in-link {
+  color: var(--colorDark);
+  font-family: var(--fontFraktionLight);
+}
+
+#email.input,
+#name.input,
+#password.input {
+  margin-bottom: 1.5rem;
+}
+
+.signup-btn {
+  display: flex;
+  justify-content: right;
+  width: 60%;
+  margin-top: 8rem;
+}
