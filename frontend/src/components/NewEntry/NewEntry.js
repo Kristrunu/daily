@@ -16,6 +16,13 @@ const NewEntry = () => {
                     <label className="entry-label" htmlFor="text"> Today I Will Focus On.. </label>
                     <input className="entry-input" type="text" name="focus" id="focus"/>
                 </div>
+                <div className="tasks-section">
+                    <div className="tasks">
+                        <label className="entry-label" htmlFor="text"> Tasks For The Day </label>
+                        <input className="input-small" type="text" name="tasks" id="tasks"/>
+                    </div>
+                        <Button btnClass="btn-dark icon-plus-icon add-task-btn"/>
+                </div>
         </div>
 
         <div className="evening">

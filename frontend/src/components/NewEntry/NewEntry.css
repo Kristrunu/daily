@@ -36,11 +36,30 @@
   font-size: 4rem;
 }
 
-.focus,
-.affirmations {
+.focus {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.5rem;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-section{
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-small {
+  padding: .5rem 1.5rem;
+}
+
+.add-task-btn {
+  border: 1px solid var(--colorPrimary);
+  padding: .5rem 0 .5rem .5rem;
+  margin-left: 1rem;
 }
 
 .morning,
@@ -57,10 +76,6 @@
 
 .mood-picker {
   display: flex;
-}
-
-.btn-icon {
-  padding-right: 1rem;
 }
 
 .btn-icon:hover {
