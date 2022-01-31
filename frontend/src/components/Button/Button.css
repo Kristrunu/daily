@@ -9,6 +9,10 @@
   font-family: var(--fontFraktionBold);
   transition: all ease 0.3s;
 }
+.btn[class^="icon-"],
+.btn[class*=" icon-"] {
+  padding-left: 3rem;
+}
 
 .btn-light {
   background-color: var(--colorPrimary);
@@ -23,5 +27,4 @@
 .btn-light:hover {
   background-color: var(--colorDark);
   color: var(--colorPrimary);
-  border: 1px solid var(--colorPrimary);
 }

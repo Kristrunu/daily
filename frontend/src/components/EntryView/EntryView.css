@@ -1,0 +1,48 @@
+.entry {
+    background-color: var(--colorPrimary);
+    color: var(--colorDark);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all ease 0.3s;
+    margin-top: 4rem;
+  }
+  
+  .entry:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  
+  .entry__content {
+    text-align: left;
+    width: 40%;
+  }
+  
+  .entry__title {
+    font-size: 1.2rem;
+    font-family: var(--fontFraktionBold);
+    margin-bottom: .5rem;
+  }
+  
+  .entry__text {
+    font-family: var(--fontFraktionLight);
+  }
+  
+  .entry__date {
+    font-size: 3rem;
+    font-family: var(--fontBelleHeavy);
+    width: 30%;
+    text-align: right;
+    padding: 1rem 0 1rem 4rem;
+  }
+  
+  .entry:nth-child(even) .entry__date {
+    order: 5;
+    text-align: left;
+  }
+  
+  .entry:nth-child(even) .entry__content {
+    text-align: right;
+  }

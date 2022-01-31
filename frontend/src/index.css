@@ -39,9 +39,16 @@
   font-display: block;
 }
 
+[class^="icon-"],
+[class*=" icon-"] {
+  position: relative;
+}
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
+  position: absolute;
+  left: 1rem;
   font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
@@ -116,12 +123,10 @@ body {
 }
 .icon-login-icon:before {
   content: "\e903";
-  margin-right: 0.5rem;
   font-size: 1.2rem;
 }
 .icon-plus-icon:before {
   content: "\e905";
-  margin-right: 0.5rem;
   font-size: 1rem;
 }
 .icon-sad-emoji:before {
@@ -136,7 +141,6 @@ body {
 }
 .icon-save-icon:before {
   content: "\e908";
-  margin-right: 0.5rem;
   font-size: 1rem;
 }
 .icon-sun-icon:before {
@@ -145,11 +149,9 @@ body {
 }
 .icon-user-icon:before {
   content: "\e90a";
-  margin-right: 0.5rem;
   font-size: 1rem;
 }
 .icon-x-icon:before {
   content: "\e90b";
-  margin-right: 0.5rem;
   font-size: 1rem;
 }

@@ -2,21 +2,23 @@
   background-color: var(--colorDark);
   color: var(--colorPrimary);
   font-family: var(--fontFraktionLight);
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
-.date-container {
+.headline-container {
   display: flex;
-  align-items: baseline;
 }
 
 .entry-headline {
   font-size: 3rem;
-  margin-left: 8rem;
+  margin-left: 9rem;
 }
 
 .all-input {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: left;
 }
 
@@ -24,31 +26,57 @@
   margin-bottom: 0.7rem;
 }
 
-.entry-input {
-  padding: 3rem;
-}
-
-.morning {
-  width: 25%;
-  margin-left: 8rem;
-}
-
 .sun-svg,
 .moon-svg {
   padding-bottom: 1.5rem;
   font-size: 4rem;
+  height: 4rem;
 }
 
-.focus,
-.affirmations {
+.focus {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.5rem;
 }
 
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-section{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-small {
+  padding: 0 1rem;
+  height: 2rem;
+  width: 100%;
+}
+
+.add-task-btn {
+  border: 1px solid var(--colorPrimary);
+  margin-left: 1rem;
+  margin-bottom: 2px;
+  height: 2rem;
+  width: 2rem;
+}
+
+.add-task-btn[class^="icon-"],
+.add-task-btn[class*=" icon-"] {
+  padding: .5rem 0 .5rem .5rem;
+}
+
+.add-task-btn:before {
+  left: 0.4rem;
+}
+
+.morning,
 .evening {
-  width: 25%;
-  margin-right: 8rem;
+  margin: 0 1rem;
 }
 
 .journal-input,
@@ -60,10 +88,7 @@
 
 .mood-picker {
   display: flex;
-}
-
-.btn-icon {
-  padding-right: 1rem;
+  height: 2.5rem;
 }
 
 .btn-icon:hover {
@@ -72,6 +97,8 @@
 
 .add-img {
   color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
+  margin: 1rem 0;
 }
 
 .c-s-buttons {
@@ -83,4 +110,8 @@
 .cancel {
   border: 1px solid var(--colorPrimary);
   margin-right: 2rem;
+}
+
+.save {
+  border: 1px solid var(--colorPrimary); 
 }
