@@ -1,26 +1,25 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();
-
+const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require("body-parser");
-const mongoose = require('mongoose');
-const cookieParser = require("cookie-parser"); 
+const cookieParser = require("cookie-parser");
 
-// import Routes 
+// import routes
 const authRoute = require("./routes/auth");
-const EntryRoute = require("./routes/entry");
+const entryRoute = require("./routes/entry");
+
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors());
 app.use(cookieParser());
 
+app.use(cors());
+
+
 app.get("/api", (req, res) => {
-  res.send("Hello world");
+  res.send("Mern stack daily journal express server");
 });
-
-
 
 app.post("/name", (req, res) => {
   if(req.body.name) {
@@ -31,7 +30,7 @@ app.post("/name", (req, res) => {
 });
 
 app.use('/api/auth', authRoute);
-app.use("/api/entry", EntryRoute);
+app.use("/api/entry", entryRoute);
 
 
 mongoose
@@ -46,5 +45,3 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
-
-

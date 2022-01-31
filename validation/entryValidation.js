@@ -4,17 +4,16 @@ const isEmpty = require('./isEmpty');
 const validateEntryInput = data => {
   let errors = {};
 
-if(isEmpty(data.content)) {
-  errors.content = "Content field can not be empty";
-} else if (!Validator.isLength(data.content, {min:1, max: 300})) {
-  errors.content = 'Content field must be between 1 and 300 characters';
-}
+  if(isEmpty(data.content)) {
+    errors.content = "Content field can not be empty";
+  } else if (!Validator.isLength(data.content, {min:1, max: 300})) {
+    errors.content = 'Content field must be between 1 and 300 characters';
+  }
 
-return {
-  errors,
-  isValid: isEmpty(errors)
-}
-
+  return {
+    errors,
+    isValid: isEmpty(errors)
+  }
 }
 
 module.exports = validateEntryInput;

@@ -9,7 +9,6 @@ const requiresAuth = require("../middleware/permissions");
 // @route   GET /api/auth/test
 // @desc    Test the auth route
 // @access  Public 
-
 router.get("/test", (req,res) => {
   res.send("Auth route working")
 })
@@ -18,57 +17,62 @@ router.get("/test", (req,res) => {
 // @desc    Create a new user
 // @access  Public 
 router.post("/register", async(req,res) => {
-try {
-  const {errors, isValid} = validateRegisterInput(req.body);
+  try {
+    const { errors, isValid } = validateRegisterInput(req.body);
 
-  if(!isValid) {
-    return res.status(400).json(errors);
-  }
-  // check for a existing user 
-  const existingEmail = await User.findOne({ 
-    email: new RegExp("^" + req.body.email + "$", "i")
-  });
+    if (!isValid) {
+      return res
+        .status(400)
+        .json(errors);
+    }
+    // check for a existing user 
+    const existingEmail = await User.findOne({ 
+      email: new RegExp("^" + req.body.email + "$", "i")
+    });
 
-  if(existingEmail) {
-    return res.status(400).json({error: " There is already a user with this email"});
-  }
-  // has the passwords
-  const hashedPassword = await bcrypt.hash(req.body.password, 12);
-  // create a new user
-  const newUser = new User({
-    email: req.body.email,
-    password: hashedPassword,
-    name: req.body.name,
-  });
+    if(existingEmail) {
+      return res
+        .status(400)
+        .json({ error: " There is already a user with this email" });
+    }
 
-  // save the user to the database 
-  const savedUser = await newUser.save(); 
+    // Hash the passwords
+    const hashedPassword = await bcrypt.hash(req.body.password, 12);
+    
+    // Create a new user
+    const newUser = new User({
+      email: req.body.email,
+      password: hashedPassword,
+      name: req.body.name,
+    });
 
-  const payload = { userId: savedUser._id };
+    // Save the user to the database 
+    const savedUser = await newUser.save(); 
+
+    const payload = { userId: savedUser._id };
 
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
-      expiresIn: "7d"
+      expiresIn: "7d",
     });
 
     res.cookie("access-token", token, {
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-      httpOnly: true, 
-      secure: process.env.NODE_ENV === "production"
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
     });
 
+    const userToReturn = { ...savedUser._doc };
+    delete userToReturn.password; 
 
-  const userToReturn = { ...savedUser._doc }
-  delete userToReturn.password; 
+    // Return the new user
+    return res.json(userToReturn);
 
-  // return the new user
-  return res.json(userToReturn);
+  } catch(err) {
+    console.log(err);
 
-} catch(err) {
-  console.log(err);
-
-  res.status(500).send(err.messsage);
-} 
-})
+    res.status(500).send(err.messsage);
+  } 
+});
 
 
 // @route   POST /api/auth/login
