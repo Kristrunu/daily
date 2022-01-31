@@ -29,10 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <EntryList entryList={entryList} />
-      <LogIn />
-      <NewEntry />
-      <SignUp />
+    
       <Layout />
     </div>
   );
