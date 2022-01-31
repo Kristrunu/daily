@@ -1,6 +1,6 @@
 import Button from "../Button/Button"
 import { Link, useLocation } from "react-router-dom";
-import { useGlobalContext } from "../../context/GlobalContext";
+import { useGlobalContext } from "../../context/GlobalContext.js";
 import './Header.css';
 
 const Header = () => {
@@ -17,8 +17,7 @@ const Header = () => {
         {user ? (
           <Button 
             btnClass="btn-light icon-logout-icon" 
-            text="Log Out" 
-            onClick={logout} 
+            text="Log Out" onClick={ logout } 
           />
         ) : pathname === "/" ? (
           <Link to="/register" className="btn">Signup</Link>
