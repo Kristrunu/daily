@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const path = require('path');
 
 // import routes
 const authRoute = require("./routes/auth");
@@ -32,6 +33,11 @@ app.post("/name", (req, res) => {
 app.use('/api/auth', authRoute);
 app.use("/api/entry", entryRoute);
 
+app.use(express.static(path.resolve(__dirname, './frontend/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './frontend/build', 'index.html'));
+});
 
 mongoose
   .connect(process.env.MONGO_URI)
