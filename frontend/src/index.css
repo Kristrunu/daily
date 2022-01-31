@@ -58,9 +58,17 @@
   --fontFraktionBold: "PPFraktionSans-Bold", "Helvetica Neue", sans-serif;
   --fontFraktionLight: "PPFraktionSans-Light", "Helvetica Neue", sans-serif;
   --fontBelleHeavy: "BelledeMai-Heavy", "Helvetica Neue", serif;
-  --colorPrimary: #fff8f2;
-  --colorDark: #303030;
-  --colorWhite: #fffdfb;
+  --colorPrimary: rgb(255, 248, 242);
+  --colorDark: rgb(48, 48, 48);
+  --colorWhite: rgb(255, 253, 251);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -68,9 +76,6 @@ body,
 #root {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   background-color: var(--colorPrimary);
 }
 
@@ -81,7 +86,7 @@ h2 {
 
 body {
   margin: 0;
-  font-family: var(--fontFraktionThin);
+  font-family: var(--fontFraktionLight);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -93,20 +98,20 @@ body {
 }
 .icon-moon-icon:before {
   content: "\e904";
-  color: #fff8f2;
+  color: var(--colorPrimary);
 }
 .icon-edit-icon:before {
   content: "\e900";
-  color: #fffdfb;
+  color: var(--colorWhite);
 }
 .icon-happiest-emoji:before {
   content: "\e901";
-  color: #fff8f2;
+  color: var(--colorPrimary);
   font-size: 2rem;
 }
 .icon-happy-emoji:before {
   content: "\e902";
-  color: #fff8f2;
+  color: var(--colorPrimary);
   font-size: 2rem;
 }
 .icon-login-icon:before {
@@ -121,12 +126,12 @@ body {
 }
 .icon-sad-emoji:before {
   content: "\e906";
-  color: #fff8f2;
+  color: var(--colorPrimary);
   font-size: 2rem;
 }
 .icon-saddest-emoji:before {
   content: "\e907";
-  color: #fff8f2;
+  color: var(--colorPrimary);
   font-size: 2rem;
 }
 .icon-save-icon:before {
@@ -136,7 +141,7 @@ body {
 }
 .icon-sun-icon:before {
   content: "\e909";
-  color: #fff8f2;
+  color: var(--colorPrimary);
 }
 .icon-user-icon:before {
   content: "\e90a";

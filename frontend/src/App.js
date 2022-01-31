@@ -1,37 +1,18 @@
-import "./App.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import DUMMY_ENTRY from "./DUMMY_ENTRY";
-import EntryList from "./components/EntryList/EntryList";
-import LogIn from "./components/LogIn/LogIn";
-import NewEntry from "./components/NewEntry/NewEntry";
-import SignUp from "./components/SignUp/SignUp";
 import Layout from "./components/Layout";
+import {GlobalProvider} from "./context/GlobalContext"
+import "./App.css";
 
 function App() {
-  const [entryList, setEntryList] = useState([]);
-
-  useEffect(() => {
-    setEntryList(DUMMY_ENTRY);
-  }, []);
-
-  console.log(entryList);
-
-  /*const getNotes = async () => {
-  try {
-    const res = await axios.get("http://localhost:5002/journal");
-    setEntryList(res.data);
-    console.log(entryList);
-  } catch (err) {
-    console.error(err);
-  }
-};*/
 
   return (
+<<<<<<< HEAD
     <div className="App">
     
+=======
+    <GlobalProvider>
+>>>>>>> f1d9f63430252ba70e483074ba16c11c8461e82d
       <Layout />
-    </div>
+    </GlobalProvider>
   );
 }
 
