@@ -2,15 +2,19 @@
   "name": "daily",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js --ignore frontend",
     "frontend": "cd frontend && npm start",
-    "dev": "concurrently \"npm run frontend\" \"npm run server\""
+    "dev": "concurrently \"npm run frontend\" \"npm run server\"",
+    "install-client": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
