@@ -1,43 +1,98 @@
-.entry {
+
+.focus-entry {
     background-color: var(--colorPrimary);
     color: var(--colorDark);
     text-decoration: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    transition: all ease 0.3s;
     margin-top: 4rem;
   }
   
-  .entry:hover {
+  /*.entry:hover {
     transform: scale(1.02);
     cursor: pointer;
+  }*/
+
+  .leftside__date {
+    font-size: 3rem;
+    font-family: var(--fontBelleHeavy);
+    width: 22%;
+    text-align: right;
+    /*padding: 1rem 0 1rem 4rem;*/
   }
-  
-  .entry__content {
+
+  .left__container {
+    text-align: left;
+    width: 40%;
+    /*margin-right: 25rem;*/
+    margin-left: 4rem;
+  }
+
+  .right__container {
     text-align: left;
     width: 40%;
   }
+
+
   
-  .entry__title {
+  .focus__title {
     font-size: 1.2rem;
     font-family: var(--fontFraktionBold);
     margin-bottom: .5rem;
   }
+
+  .journal__title {
+    font-size: 1.2rem;
+    font-family: var(--fontFraktionBold);
+    margin-bottom: .5rem;
+  }
+
   
-  .entry__text {
+  .focus__text {
     font-family: var(--fontFraktionLight);
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+
+  .journal__text {
+    font-family: var(--fontFraktionLight);
+    width: 70%;
+  }
+
+.task__lists {
+    flex-direction: row;
+    text-align: left;
+    width: 40%;
+}
+
+  .task__title {
+    font-family: var(--fontFraktionBold);
+    margin-bottom: .5rem;
   }
   
-  .entry__date {
-    font-size: 3rem;
-    font-family: var(--fontBelleHeavy);
-    width: 30%;
-    text-align: right;
-    padding: 1rem 0 1rem 4rem;
+  .task__list {
+      margin-bottom: 3rem;
   }
-  
+
+  .mood__title {
+    margin-bottom: 0.7rem;
+    margin-top: 3rem;
+    font-family: var(--fontFraktionBold);
+  }
+
+  .happymood-picker {
+    display: flex;
+    height: 2.5rem;
+  }
+
+  .b-e-d-buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 3rem 3rem 0;
+  }
+
+  /*
   .entry:nth-child(even) .entry__date {
     order: 5;
     text-align: left;
@@ -45,4 +100,4 @@
   
   .entry:nth-child(even) .entry__content {
     text-align: right;
-  }
+  } */
