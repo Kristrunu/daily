@@ -2,21 +2,23 @@
   background-color: var(--colorDark);
   color: var(--colorPrimary);
   font-family: var(--fontFraktionLight);
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
-.date-container {
+.headline-container {
   display: flex;
-  align-items: baseline;
 }
 
 .entry-headline {
   font-size: 3rem;
-  margin-left: 8rem;
+  margin-left: 9rem;
 }
 
 .all-input {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: left;
 }
 
@@ -28,27 +30,41 @@
   padding: 3rem;
 }
 
-.morning {
-  width: 25%;
-  margin-left: 8rem;
-}
-
 .sun-svg,
 .moon-svg {
   padding-bottom: 1.5rem;
   font-size: 4rem;
 }
 
-.focus,
-.affirmations {
+.focus {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.5rem;
 }
 
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-section{
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-small {
+  padding: .5rem 1.5rem;
+}
+
+.add-task-btn {
+  border: 1px solid var(--colorPrimary);
+  padding: .5rem 0 .5rem .5rem;
+  margin-left: 1rem;
+}
+
+.morning,
 .evening {
-  width: 25%;
-  margin-right: 8rem;
+  margin: 0 1rem;
 }
 
 .journal-input,
@@ -62,16 +78,13 @@
   display: flex;
 }
 
-.btn-icon {
-  padding-right: 1rem;
-}
-
 .btn-icon:hover {
   transform: scale(1.1);
 }
 
 .add-img {
   color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
 }
 
 .c-s-buttons {

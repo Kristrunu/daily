@@ -7,6 +7,9 @@ import LogIn from "./components/LogIn/LogIn";
 import NewEntry from "./components/NewEntry/NewEntry";
 import SignUp from "./components/SignUp/SignUp";
 import EntryView from "./components/EntryView/EntryView";
+import EmptyState from "./components/EmptyState/EmptyState";
+
+
 
 function App() {
   const [entryList, setEntryList] = useState([]);
@@ -30,8 +33,9 @@ function App() {
   return (
     <div className="App">
       <EntryList entryList={entryList} />
-      <LogIn />
+      <EmptyState />
       <NewEntry />
+      <LogIn />
       <SignUp />
       <EntryView />
     </div>

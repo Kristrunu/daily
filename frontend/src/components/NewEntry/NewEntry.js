@@ -6,20 +6,23 @@ const NewEntry = () => {
   return(
     <form className="new-entry">
 
-        <div className="date-container">
+        <div className="headline-container">
             <h2 className="entry-headline">New Entry</h2>
         </div>
-<div className="all-input">
-        <div className="morning">
-        <div className="icon-sun-icon sun-svg"></div>
-            <div className="affirmations">
-                <label className="entry-label" htmlFor="text"> Affirmations For The Day </label>
-                <input className="entry-input" type="text" name="affirmations" id="affirmations"/>
-            </div>
-            <div className="focus">
-                <label className="entry-label" htmlFor="text"> Today I Will Focus On.. </label>
-                <input className="entry-input" type="text" name="focus" id="focus"/>
-            </div>
+        <div className="all-input">
+            <div className="morning">
+            <div className="icon-sun-icon sun-svg"></div>
+                <div className="focus">
+                    <label className="entry-label" htmlFor="text"> Today I Will Focus On.. </label>
+                    <input className="entry-input" type="text" name="focus" id="focus"/>
+                </div>
+                <div className="tasks-section">
+                    <div className="tasks">
+                        <label className="entry-label" htmlFor="text"> Tasks For The Day </label>
+                        <input className="input-small" type="text" name="tasks" id="tasks"/>
+                    </div>
+                        <Button btnClass="btn-dark icon-plus-icon add-task-btn"/>
+                </div>
         </div>
 
         <div className="evening">
@@ -37,7 +40,7 @@ const NewEntry = () => {
                     <Button btnClass="btn-icon icon-saddest-emoji"/>
                     </div>
             </div>
-            <a className="add-img" href="/">Add Images From The Day</a>
+            <Button btnClass="btn-dark add-img" text="Add Images From The Day"/>
             <div className="c-s-buttons">
                     <Button btnClass="btn-dark cancel icon-x-icon" text="Cancel"/>
                     <Button btnClass="btn-light save icon-save-icon" text="Save Entry"/>

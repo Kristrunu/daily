@@ -9,7 +9,7 @@ const EntryView = () => {
       
       <div className="entry__content">
         <div className="entry__title">
-            My day was super great
+            Today I will focus on
         </div>
         <div className="entry__text">
             Dui sit morbi amet ac tellus faucibus elit gravida iaculis. 

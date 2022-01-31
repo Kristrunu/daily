@@ -1,9 +1,9 @@
-import "./LogIn.css";
-import Button from "../Button/Button";
-import { ReactComponent as Logo } from '../../svg/logo.svg';
-import { ReactComponent as LogoBackground } from '../../svg/login-bg.svg';
+import Button from './Button/Button';
+import { ReactComponent as Logo } from '../svg/logo.svg';
+import { ReactComponent as LogoBackground } from '../svg/login-bg.svg';
 
-function LogIn() {
+
+const AuthBox = () => { 
   return (
     <div className="container">
       <div className="left-side">
@@ -34,6 +34,7 @@ function LogIn() {
           </div>
         </form>
 
+
         <div className="info-link">
           <a href="/" className="forgot-pass">
             Forgot Password
@@ -56,6 +57,6 @@ function LogIn() {
       </div>
     </div>
   );
-}
+};
 
-export default LogIn;
+export default AuthBox;
