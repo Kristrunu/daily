@@ -6,6 +6,7 @@ function App() {
 
   return (
     <GlobalProvider>
+
       <Layout />
     </GlobalProvider>
   );
