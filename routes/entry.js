@@ -29,7 +29,7 @@ router.post("/new", requiresAuth, async (req, res) => {
     const newEntry = new Entry({
       user: req.user._id,
       content: req.body.content,
-      complete:false,
+      complete: false,
     })
 
     await newEntry.save();
@@ -223,6 +223,10 @@ router.delete("/:entryId", requiresAuth, async (req, res) => {
     console.log(err);
     return res.status(500).send(err.message);
   }
-})
+});
+
+
+
+
 
  module.exports = router; 
