@@ -1,13 +1,17 @@
 .btn {
   background-color: var(--colorDark);
   color: var(--colorPrimary);
-  border: none;
+  border: 1px solid var(--colorDark);
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-family: var(--fontFraktionBold);
   transition: all ease 0.3s;
+}
+.btn[class^="icon-"],
+.btn[class*=" icon-"] {
+  padding-left: 3rem;
 }
 
 .btn-light {
@@ -19,11 +23,9 @@
 .btn-dark:hover {
   background-color: var(--colorPrimary);
   color: var(--colorDark);
-  border: 1px solid var(--colorDark);
 }
 
 .btn-light:hover {
   background-color: var(--colorDark);
   color: var(--colorPrimary);
-  border: 1px solid var(--colorPrimary);
 }
