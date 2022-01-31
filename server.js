@@ -33,6 +33,7 @@ app.post("/name", (req, res) => {
 app.use('/api/auth', authRoute);
 app.use("/api/entry", entryRoute);
 
+// For Heroku build
 app.use(express.static(path.resolve(__dirname, './frontend/build')));
 
 app.get('*', (req, res) => {

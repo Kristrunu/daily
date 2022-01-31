@@ -1,6 +1,8 @@
 .auth {
   display: flex;
   width: 100%;
+  height: calc(100vh - 5rem);
+  min-height: 520px;
   background-color: var(--colorWhite);
 }
 
@@ -9,7 +11,6 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  padding: 0 5%;
 }
 
 /* Logo on the right side*/
@@ -23,7 +24,6 @@
 }
 
 .logo-bg {
-  position: absolute;
   height: 100%;
   z-index: 1;
 }
@@ -31,6 +31,7 @@
 /*<div> hugging all left side*/
 .auth__box--left {
   flex-direction: column;
+  padding: 5%;
   color: var(--colorDark);
 }
 
@@ -41,13 +42,14 @@
 .auth__footer {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 /* Log In - Title */
 .login-title {
   font-size: 3rem;
-  text-align: left;
-  margin-bottom: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .auth__form {
@@ -90,7 +92,7 @@
 .auth__register {
   margin-top: 1rem;
   color: var(--colorDark);
-  text-align: center;
+  align-self: center;
 }
 .auth__register a {
   color: var(--colorDark);

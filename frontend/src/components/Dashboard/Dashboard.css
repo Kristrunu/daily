@@ -1,3 +1,7 @@
+.dashboard {
+  padding: 5%;
+}
+
 .todos:not(:last-child) {
   margin-bottom: 2rem;
 }

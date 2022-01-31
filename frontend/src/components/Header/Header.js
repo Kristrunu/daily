@@ -19,9 +19,9 @@ const Header = () => {
             text="Log Out" onClick={ logout } 
           />
         ) : pathname === "/" ? (
-          <Link to="/register" className="btn">Signup</Link>
+          <Link to="/register" className="btn">Sign Up</Link>
         ) : (
-          <Link to="/" className="btn">Login</Link>
+          <Link to="/" className="btn">Log In</Link>
         )}
       </div>
     </header>  

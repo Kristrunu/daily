@@ -12,7 +12,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (!user && navigate) {
-            navigate('/');
+            navigate("/");
         }
     }, [user, navigate]);
 
@@ -20,10 +20,10 @@ const Dashboard = () => {
         <div className="dashboard">
             {completeToDos.length === 0 && incompleteToDos.length === 0 ? (
                 <>
-                    <EmptyState /> 
                     <NewToDo />
+                    <EmptyState /> 
                 </>
-            ):(
+            ) : (
                 <>
                     <NewToDo />
                     <div className="todos">
@@ -42,16 +42,15 @@ const Dashboard = () => {
 
                     {completeToDos.length > 0 && (
                         <div className="todos">
-                            <h2 className="todos__title">Complete Todo's</h2>
+                            <h2 className="todos__title">Complete ToDo's</h2>
                             {completeToDos.map((toDo) => (
                                 <ToDoCard toDo={toDo} key={toDo._id} />
                             ))}
                         </div>
                     )}
                 </> 
-            )};
+            )}
         </div>
-    
     );
 };
 

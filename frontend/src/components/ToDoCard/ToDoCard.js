@@ -1,6 +1,6 @@
+import axios from "axios";
 import { useRef, useState } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
-import axios from "axios";
 import './ToDoCard.css';
 
 const ToDoCard = ({ toDo }) => {
@@ -9,21 +9,21 @@ const ToDoCard = ({ toDo }) => {
     const input = useRef(null);
     const { toDoComplete, toDoIncomplete, removeToDo, updateToDo } = useGlobalContext();
 
-    const onEdit = e => {
+    const onEdit = (e) => {
         e.preventDefault();
-
+    
         setEditing(true);
         input.current.focus();
-    }
+    };
 
-    const stopEditing = e => {
-        if(e) {
+    const stopEditing = (e) => {
+        if (e) {
             e.preventDefault();
         }
-
+    
         setEditing(false);
         setContent(toDo.content);
-    }
+    };
 
     const markAsComplete = (e) => {
         e.preventDefault();
@@ -37,14 +37,14 @@ const ToDoCard = ({ toDo }) => {
         e.preventDefault();
     
         axios.put(`/api/entry/${toDo._id}/incomplete`).then((res) => {
-            toDoIncomplete(res.data);
+          toDoIncomplete(res.data);
         });
     };
 
     const deleteToDo = (e) => {
         e.preventDefault();
-
-        if(window.confirm('Are you sure you want to delete this Todo?')) {
+    
+        if (window.confirm("Are you sure you want to delete this ToDo?")) {
             axios.delete(`/api/entry/${toDo._id}`).then(() => {
                 removeToDo(toDo);
             });
@@ -53,34 +53,38 @@ const ToDoCard = ({ toDo }) => {
 
     const editToDo = (e) => {
         e.preventDefault();
-
-        axios.put(`/api/entry/${toDo._id}`, { content }).then((res) => {
-            updateToDo(res.data);
-            setEditing(false);
-        }).catch(() => {
-            stopEditing();
-        });
+    
+        axios
+            .put(`/api/entry/${toDo._id}`, { content })
+            .then((res) => {
+                updateToDo(res.data);
+                setEditing(false);
+            })
+            .catch(() => {
+                stopEditing();
+            });
     };
 
     return (
-        <div className={`todo ${toDo.complete ? 'todo--complete' : ''}`}>
-            <input 
-                type="checkbox" 
-                checked={toDo.complete} 
+        <div className={`todo ${toDo.complete ? "todo--complete" : ""}`}>
+            <input
+                type="checkbox"
+                checked={toDo.complete}
                 onChange={!toDo.complete ? markAsComplete : markAsIncomplete}
             />
-            <input 
-                type="text" 
-                value={content} 
-                ref={input} 
-                readOnly={!editing} 
+
+            <input
+                type="text"
+                ref={input}
+                value={content}
+                readOnly={!editing}
                 onChange={(e) => setContent(e.target.value)}
             />
 
             <div className="todo__controls">
                 {!editing ? (
                     <>
-                        {!toDo.complete && (<button onClick={onEdit}>Edit</button>)}
+                        {!toDo.complete && <button onClick={onEdit}>Edit</button>}
                         <button onClick={deleteToDo}>Delete</button>
                     </>
                 ) : (
