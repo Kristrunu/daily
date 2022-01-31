@@ -149,6 +149,4 @@ router.put("/logout", requiresAuth, async(req,res) => {
 })
 
 
-
-
 module.exports = router; 

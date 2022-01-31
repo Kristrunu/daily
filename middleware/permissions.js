@@ -22,7 +22,6 @@ const requiresAuth = async (req,res, next) => {
       } catch {
         isAuthed = false;
       }
-    
     } catch {
       isAuthed = false;
     }
