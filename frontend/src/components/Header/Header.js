@@ -6,7 +6,7 @@ import './Header.css';
 const Header = () => {
   const { user, logout } = useGlobalContext();
   const { pathname } = useLocation();
-
+  //console.log(logout)
   return (
 
     <header>
