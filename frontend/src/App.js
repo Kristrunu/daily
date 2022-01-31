@@ -6,6 +6,7 @@ import EntryList from "./components/EntryList/EntryList";
 import LogIn from "./components/LogIn/LogIn";
 import NewEntry from "./components/NewEntry/NewEntry";
 import SignUp from "./components/SignUp/SignUp";
+import EntryView from "./components/EntryView/EntryView";
 
 function App() {
   const [entryList, setEntryList] = useState([]);
@@ -32,6 +33,7 @@ function App() {
       <LogIn />
       <NewEntry />
       <SignUp />
+      <EntryView />
     </div>
   );
 }
