@@ -50,7 +50,7 @@ export const GlobalProvider = (props) => {
 
     useEffect(() => {
         getCurrentUser();
-    }, [])
+    }, []);
 
     // action: get current user
     const getCurrentUser = async () => {
@@ -71,23 +71,64 @@ export const GlobalProvider = (props) => {
         } catch (err) {
             console.log(err);
         }
-    }
+    };
 
     const logout = async () => {
         try {
-            console.log('logout')
             await axios.put('/api/auth/logout');
             dispatch({ type: 'RESET_USER' });                  
         } catch (err) {
             console.log(err);
             dispatch({ type: 'RESET_USER' });
         }
-    }
+    };
+
+    const addToDo = (toDo) => {
+        dispatch({
+            type: 'SET_INCOMPLETE_TODOS',
+            payload: [toDo, ...state.incompleteToDos]
+        });
+    };
+
+    const toDoComplete = (toDo) => {
+        dispatch({
+          type: "SET_INCOMPLETE_TODOS",
+          payload: state.incompleteToDos.filter(
+            (incompleteToDo) => incompleteToDo._id !== toDo._id
+          ),
+        });
+    
+        dispatch({
+          type: "SET_COMPLETE_TODOS",
+          payload: [toDo, ...state.completeToDos],
+        });
+      };
+
+    const toDoIncomplete = (toDo) => {
+        dispatch({
+          type: "SET_COMPLETE_TODOS",
+          payload: state.completeToDos.filter(
+            (completeToDo) => completeToDo._id !== toDo._id
+          ),
+        });
+    
+        const newIncompleteToDos = [toDo, ...state.incompleteToDos];
+    
+        dispatch({
+          type: "SET_INCOMPLETE_TODOS",
+          payload: newIncompleteToDos.sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+          ),
+        });
+      };
 
     const value = {
         ...state,
         getCurrentUser,
         logout,
+        addToDo,
+        toDoComplete,
+        toDoIncomplete,
     }
     
     return (

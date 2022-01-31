@@ -60,6 +60,10 @@
   place-content: center;
 }
 
+.todo input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
 .todo input[type="checkbox"]::before {
   content: "";
   width: 0.6rem;

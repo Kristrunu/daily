@@ -1,0 +1,13 @@
+.new {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.new input {
+  width: 100%;
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+}
