@@ -6,6 +6,8 @@ import EmptyState from "../EmptyState/EmptyState"
 import NewToDo from "../NewToDo/NewToDo";
 import './Dashboard.css';
 
+
+
 const Dashboard = () => {
     const { user, incompleteToDos } = useGlobalContext();
     const navigate = useNavigate();
@@ -16,7 +18,14 @@ const Dashboard = () => {
         }
     }, [user, navigate]);
 
+   
+    const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
+
+
+
     return (
+   
+
         <div className="dashboard">
             {incompleteToDos.length === 0 ? (
                 <>
@@ -29,7 +38,9 @@ const Dashboard = () => {
                     <div className="todos">
                         {incompleteToDos.map((toDo) => (  
                             <>
-                          <p>{toDo.createdAt}</p>
+                          <p>{(new Date(toDo.createdAt).getDate() < 10 ? '0' : " ") + (new Date(toDo.createdAt).getDate())}</p>
+
+                          <p>{months[new Date(toDo.createdAt).getMonth()]}</p>
                             <ToDoCard toDo={toDo} key={toDo._id} />
                             </>
                         ))}
