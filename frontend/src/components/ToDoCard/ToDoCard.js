@@ -7,7 +7,7 @@ const ToDoCard = ({ toDo }) => {
     const [content, setContent] = useState(toDo.content);
     const [editing, setEditing] = useState(false);
     const input = useRef(null);
-    const { toDoComplete, toDoIncomplete, removeToDo, updateToDo } = useGlobalContext();
+    const { removeToDo, updateToDo } = useGlobalContext();
 
     const onEdit = (e) => {
         e.preventDefault();
@@ -25,21 +25,6 @@ const ToDoCard = ({ toDo }) => {
         setContent(toDo.content);
     };
 
-    const markAsComplete = (e) => {
-        e.preventDefault();
-    
-        axios.put(`/api/entry/${toDo._id}/complete`).then((res) => {
-            toDoComplete(res.data);
-        });
-    };
-
-    const markAsIncomplete = (e) => {
-        e.preventDefault();
-    
-        axios.put(`/api/entry/${toDo._id}/incomplete`).then((res) => {
-          toDoIncomplete(res.data);
-        });
-    };
 
     const deleteToDo = (e) => {
         e.preventDefault();
@@ -66,13 +51,8 @@ const ToDoCard = ({ toDo }) => {
     };
 
     return (
-        <div className={`todo ${toDo.complete ? "todo--complete" : ""}`}>
-            <input
-                type="checkbox"
-                checked={toDo.complete}
-                onChange={!toDo.complete ? markAsComplete : markAsIncomplete}
-            />
-
+        <div className={`todo`}>
+            
             <input
                 type="text"
                 ref={input}
@@ -84,7 +64,7 @@ const ToDoCard = ({ toDo }) => {
             <div className="todo__controls">
                 {!editing ? (
                     <>
-                        {!toDo.complete && <button onClick={onEdit}>Edit</button>}
+                        <button onClick={onEdit}>Edit</button>
                         <button onClick={deleteToDo}>Delete</button>
                     </>
                 ) : (

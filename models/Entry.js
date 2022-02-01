@@ -6,17 +6,19 @@ const EntrySchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User"
     },
-    content: {
-      type: String,
-      require: true
+    
+     content: {
+       type: String,
+       require: true
     },
-    complete: {
-      type: Boolean, 
-      default: false,
-    },
-    completedAt: {
-      type: Date, 
-    }
+
+    // complete: {
+    //   type: Boolean, 
+    //   default: false,
+    // },
+    // completedAt: {
+    //   type: Date, 
+    // }
 },
   {
   timestamps: true

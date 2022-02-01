@@ -18,8 +18,7 @@ const NewToDo = () => {
 
     return (
         <form className="new" onSubmit={onSubmit}>
-            <input 
-                type="text" 
+            <textarea
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
             />

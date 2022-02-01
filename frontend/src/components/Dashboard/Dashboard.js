@@ -7,7 +7,7 @@ import NewToDo from "../NewToDo/NewToDo";
 import './Dashboard.css';
 
 const Dashboard = () => {
-    const { user, completeToDos, incompleteToDos } = useGlobalContext();
+    const { user, incompleteToDos } = useGlobalContext();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard">
-            {completeToDos.length === 0 && incompleteToDos.length === 0 ? (
+            {incompleteToDos.length === 0 ? (
                 <>
                     <NewToDo />
                     <EmptyState /> 
@@ -27,19 +27,13 @@ const Dashboard = () => {
                 <>
                     <NewToDo />
                     <div className="todos">
-                        {incompleteToDos.map((toDo) => (
+                        {incompleteToDos.map((toDo) => (  
+                            <>
+                          <p>{toDo.createdAt}</p>
                             <ToDoCard toDo={toDo} key={toDo._id} />
+                            </>
                         ))}
                     </div>
-
-                    {completeToDos.length > 0 && (
-                        <div className="todos">
-                            <h2 className="todos__title">Complete ToDo's</h2>
-                            {completeToDos.map((toDo) => (
-                                <ToDoCard toDo={toDo} key={toDo._id} />
-                            ))}
-                        </div>
-                    )}
                 </> 
             )}
         </div>
