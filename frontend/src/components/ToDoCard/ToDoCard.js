@@ -2,6 +2,11 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
 import './ToDoCard.css';
+import '../Button/Button.css';
+
+const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
+
+
 
 const ToDoCard = ({ toDo }) => {
     const [content, setContent] = useState(toDo.content);
@@ -51,7 +56,13 @@ const ToDoCard = ({ toDo }) => {
     };
 
     return (
-        <div className={`todo`}>
+        <>
+
+<div class="wrapperdate">
+                        <p class="monthname">{months[new Date(toDo.createdAt).getMonth()]}</p>
+                        <p class="date" >{(new Date(toDo.createdAt).getDate() < 10 ? '0' : " ") + (new Date(toDo.createdAt).getDate())}</p>
+                        </div>
+        <div className="todo">
             
             <input
                 type="text"
@@ -59,22 +70,24 @@ const ToDoCard = ({ toDo }) => {
                 value={content}
                 readOnly={!editing}
                 onChange={(e) => setContent(e.target.value)}
-            />
+            />  
 
+     
             <div className="todo__controls">
                 {!editing ? (
                     <>
-                        <button onClick={onEdit}>Edit</button>
-                        <button onClick={deleteToDo}>Delete</button>
+                        <button className="btn" onClick={onEdit}>Edit</button>
+                        <button className="btn" onClick={deleteToDo}>Delete</button>
                     </>
                 ) : (
                     <>
-                        <button onClick={stopEditing}>Cancel</button>
-                        <button onClick={editToDo}>Save</button>
+                        <button className="btn" onClick={stopEditing}>Cancel</button>
+                        <button className="btn" onClick={editToDo}>Save</button>
                     </>
                 )}
             </div>
-        </div>
+         </div> 
+        </>
     );
 };
 

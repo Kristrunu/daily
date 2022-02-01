@@ -38,9 +38,7 @@ const Dashboard = () => {
                     <div className="todos">
                         {incompleteToDos.map((toDo) => (  
                             <>
-                          <p>{(new Date(toDo.createdAt).getDate() < 10 ? '0' : " ") + (new Date(toDo.createdAt).getDate())}</p>
-
-                          <p>{months[new Date(toDo.createdAt).getMonth()]}</p>
+                            
                             <ToDoCard toDo={toDo} key={toDo._id} />
                             </>
                         ))}

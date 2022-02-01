@@ -2,10 +2,40 @@
   padding: 5%;
 }
 
+.wrapper-todo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
 .todos:not(:last-child) {
   margin-bottom: 2rem;
 }
 
 .todos__title {
   font-size: 1.5rem;
+}
+
+.wrapperdate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date {
+  font-size: 3rem;
+  font-family: var(--fontBelleHeavy);
+
+}
+
+.monthname {
+  font-size: 1.2rem;
+  font-family: var(--fontFraktionBold);
+ 
+  
 }

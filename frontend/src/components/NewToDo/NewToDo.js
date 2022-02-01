@@ -18,11 +18,11 @@ const NewToDo = () => {
 
     return (
         <form className="new" onSubmit={onSubmit}>
-            <textarea
+            <textarea className="new-input"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
             />
-            <button className="btn" type="submit" disabled={content.length === 0}>
+            <button className="btn-dark btn-large icon-plus-icon" type="submit" disabled={content.length === 0}>
                 Add
             </button>
         </form>
