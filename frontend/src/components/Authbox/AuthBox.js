@@ -64,7 +64,7 @@ const AuthBox = ({ register }) => {
 
       <div className="auth__box auth__box--left">
         <div className="auth__header">
-          <h1 className="login-title">{register ? 'Signup' : 'Login'}</h1>
+          <h1 className="login-title">{register ? 'Sign Up' : 'Log In'}</h1>
         </div>
         
         <form className="auth__form" onSubmit={onSubmit}>
@@ -136,7 +136,7 @@ const AuthBox = ({ register }) => {
               btnClass="btn-dark log-in-btn icon-login-icon"
               type="submit" 
               disabled={loading} 
-              text={register ? "Signup" : "Login"}
+              text={register ? "Sign Up" : "Log In"}
             />
 
             {!register ? (
@@ -148,7 +148,7 @@ const AuthBox = ({ register }) => {
             ) : ( 
               <div className="auth__register">
                 <p>
-                  Already signed up? <Link to="/">Login</Link>
+                  Already signed up? <Link to="/">Log In</Link>
                 </p>
               </div>
             )}

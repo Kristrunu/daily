@@ -7,6 +7,7 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-family: var(--fontFraktionBold);
+  text-decoration: none;
   transition: all ease 0.3s;
 }
 .btn[class^="icon-"],
