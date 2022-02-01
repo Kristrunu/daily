@@ -34,14 +34,6 @@ const Dashboard = () => {
 
                     {completeToDos.length > 0 && (
                         <div className="todos">
-                            {incompleteToDos.map((toDo) => (
-                                <ToDoCard toDo={toDo} key={toDo._id} />
-                            ))}
-                        </div>
-                    )}
-
-                    {completeToDos.length > 0 && (
-                        <div className="todos">
                             <h2 className="todos__title">Complete ToDo's</h2>
                             {completeToDos.map((toDo) => (
                                 <ToDoCard toDo={toDo} key={toDo._id} />

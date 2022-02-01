@@ -4,15 +4,15 @@ import Dashboard from './Dashboard/Dashboard';
 import AuthBox from './Authbox/AuthBox';
 import { useGlobalContext } from '../context/GlobalContext';
 
-  const Layout = () => {
-    const { fetchingUser } = useGlobalContext();
+const Layout = () => {
+  const { fetchingUser } = useGlobalContext();
 
-  // return fetchingUser ? (
-    //   <div className="loading">
-    //     <h1>Loading...</h1>
-    //   </div>
-  // ) : (
-  return (
+  return fetchingUser ? (
+    <div className="loading">
+      <h1>Loading...</h1>
+    </div>
+  ) : (
+  
     <BrowserRouter>
       <Header />
 

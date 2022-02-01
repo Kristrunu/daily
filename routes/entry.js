@@ -120,7 +120,7 @@ router.put("/:entryId/incomplete", requiresAuth, async(req,res) => {
   try { 
     const entry = await Entry.findOne({
       user: req.user._id,
-      id: req.params.entryId,
+      _id: req.params.entryId,
     });
 
     if(!entry) {
@@ -138,7 +138,7 @@ router.put("/:entryId/incomplete", requiresAuth, async(req,res) => {
       },
 
       {
-        complete:false,
+        complete: false,
         completedAt: null,
       },
       {
@@ -164,7 +164,7 @@ router.put("/:entryId", requiresAuth, async (req,res) => {
   try { 
     const entry = await Entry.findOne({
       user: req.user._id,
-      id: req.params.entryId,
+      _id: req.params.entryId,
     });
 
     if(!entry) {
@@ -180,7 +180,7 @@ router.put("/:entryId", requiresAuth, async (req,res) => {
     const updatedEntry = await Entry.findOneAndUpdate(
       {
           user: req.user._id,
-          id: req.params.entryId,
+          _id: req.params.entryId,
       },
       {
           content: req.body.content
@@ -206,7 +206,7 @@ router.delete("/:entryId", requiresAuth, async (req, res) => {
   try { 
     const entry = await Entry.findOne({
       user: req.user._id,
-      id: req.params.entryId,
+      _id: req.params.entryId,
     });
 
     if(!entry) {
@@ -215,7 +215,7 @@ router.delete("/:entryId", requiresAuth, async (req, res) => {
 
     await Entry.findOneAndRemove({
       user: req.user._id,
-      id: req.params.entryId,
+      _id: req.params.entryId,
     });
 
     return res.json({ sucess: true });
