@@ -18,7 +18,8 @@
   font-family: var(--fontFraktionLight);
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 85%;
+  max-width: 900px;
 }
 
 .entry-text {
