@@ -22,15 +22,18 @@
 }
 
 .entry-text {
-  border: none;
+  border: 2px solid var(--colorDark);
   background-color: var(--colorPrimary);
   line-height: 1.3rem;
   height: 9rem;
+  padding: 1.2rem;
 }
 
 textarea {
   resize: none;
+  
 }
+
 
 .entry__date {
   font-size: 3rem;
