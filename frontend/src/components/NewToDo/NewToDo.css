@@ -1,16 +1,37 @@
+.entry-title{
+  font-family: var(--fontFraktionBold);
+  color: var(--colorWhite);
+}
+
 .new-entry {
+  background-color: var(--colorDark);
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  margin: auto 0;
+  margin-top: 2rem;
+  padding-left: 0rem;
+  justify-content: center;
+  padding: 1rem 0rem;
 }
-
+/*Textinn í input notar ekki allan input-field, staðsetur sig í miðju*/
 .new-entry__input {
   width: 100%;
   margin-right: 0.2rem;
   font-family: var(--fontFraktionBold);
   font-size: 1rem;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 15rem;
   background-color: var(--colorPrimary);
   border: 0.2rem solid var(--colorDark);
-  
+}
+
+
+/*
+textarea{
+  resize: none;
+}
+*/
+
+.add-btn {
+  float: right;
 }
