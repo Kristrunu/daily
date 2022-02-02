@@ -2,7 +2,7 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
 import Button from "../Button/Button";
-import "./ToDoCard.css";
+import "./EntryCard.css";
 
 const EntryCard = ({ entry }) => {
     const [content, setContent] = useState(entry .content);

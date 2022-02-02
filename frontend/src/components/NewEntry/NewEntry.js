@@ -1,56 +1,37 @@
-import Button from "../../Button/Button";
-import "./NewEntry.css";
+import axios from 'axios';
+import { useState } from 'react';
+import { useGlobalContext } from "../../context/GlobalContext";
+import Button from '../Button/Button';
+import './NewEntry.css'
 
 
 const NewEntry = () => {
-  return(
-    <form className="new-entry">
+    const [content, setContent] = useState('');
+    const { addEntry } = useGlobalContext();
 
-        <div className="headline-container">
-            <h2 className="entry-headline">New Entry</h2>
-        </div>
-        <div className="all-input">
-            <div className="morning">
-            <div className="icon-sun-icon sun-svg"></div>
-                <div className="focus">
-                    <label className="entry-label" htmlFor="focus"> Today I Will Focus On.. </label>
-                    <textarea className="entry-input" name="focus" id="focus" cols="30" rows="7"/>
+    const onSubmit = e => {
+        e.preventDefault();
+
+        axios.post('/api/entry/new', {content}).then(res => {
+            setContent('');
+            addEntry(res.data);
+        })
+    }
+
+    return (
+        <form className="new-entry" onSubmit={onSubmit}>
+            <div className="all-input-field">
+                <label className="entry-title">New Journal Entry</label>
+                <textarea className="new-entry__input"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                />
+                <div className="add-btn">
+                <Button btnClass="btn-light btn-large icon-plus-icon" text="Add" type="submit" disabled={content.length === 0}/>
                 </div>
-                
-                <div className="tasks-section">
-                    <div className="tasks">
-                        <label className="entry-label" htmlFor="tasks"> Tasks For The Day </label>
-                        <input className="input-small" type="text" name="tasks" id="tasks"/>
-                    </div>
-                        <Button btnClass="btn-dark icon-plus-icon add-task-btn"/>
-                </div>
-        </div>
-
-        <div className="evening">
-        <div className="icon-moon-icon moon-svg"></div>
-            <div className="journal-input">
-                <label className="entry-label" htmlFor="journalEntry"> Journal Entry </label>
-                <textarea className="entry-input" name="journalEntry" id="journalEntry" cols="30" rows="7"/>
             </div>
-
-            <div className="mood">
-                <label className="entry-label" htmlFor="mood-picker"> My Mood </label>
-                    <div className="mood-picker">
-                    <Button btnClass="btn-icon icon-happiest-emoji"/>
-                    <Button btnClass="btn-icon icon-happy-emoji"/>
-                    <Button btnClass="btn-icon icon-sad-emoji"/>
-                    <Button btnClass="btn-icon icon-saddest-emoji"/>
-                    </div>
-            </div>
-            <Button btnClass="btn-dark add-img" text="Add Images From The Day"/>
-            <div className="c-s-buttons">
-                    <Button btnClass="btn-dark cancel icon-x-icon" text="Cancel"/>
-                    <Button btnClass="btn-light save icon-save-icon" text="Save Entry"/>
-            </div>
-        </div>
-</div>
-    </form>
-  )
+        </form>
+    );
 };
 
 export default NewEntry;
