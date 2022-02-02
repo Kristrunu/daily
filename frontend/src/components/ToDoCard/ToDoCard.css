@@ -1,59 +1,65 @@
-.todo {
+.entry {
   background-color: var(--colorPrimary);
   color: var(--colorDark);
-  flex-direction: column;
   text-decoration: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   transition: all ease 0.3s;
+  margin-top: 4rem;
+}
+
+.entry:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.entry__content {
+  font-family: var(--fontFraktionLight);
+  text-align: left;
+  width: 40%;
+}
+
+.entry__title {
+  font-size: 1.2rem;
+  font-family: var(--fontFraktionBold);
+  margin-bottom: .5rem;
+}
+
+.entry__date {
+  font-size: 3rem;
+  font-family: var(--fontBelleHeavy);
+  width: 30%;
+  text-align: right;
+  padding: 1rem 0 1rem 4rem;
+}
+
+.entry:nth-child(even) .entry__date {
+  order: 5;
+  text-align: left;
+}
+
+.entry:nth-child(even) .entry__content {
+  text-align: right;
 }
 
 
-.todos {
-  display: flex;
-  flex-direction: column;
-  flex:1æ
-}
 
-.todos:nth-of-type(2) {
-  align-items: flex-end;
-}
-
-.todo:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.todo input[type="text"] {
-  background-color: transparent;
-  border: none;
-  font-size: 1rem;
-  border-color: black;
-  padding: 1rem;
-
-}
-
-.todo input[type="text"]:focus {
-  outline: none;
-}
-
-
-.todo__controls {
+.entry__controls {
   display: flex;
   margin-top: 0.5rem;
+  align-self: flex-end;
 }
 
 
-.todo__controls button:not(:last-child) {
+.entry__controls button:not(:last-child) {
   margin-right: 10px;
 }
 
-.todo__controls button:hover {
+.entry__controls button:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
 
-.todos:nth-of-type(2){
-  background-color: red;
-
-}

@@ -1,10 +1,10 @@
-.new {
+.new-entry {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
 }
 
-.new-input {
+.new-entry__input {
   width: 100%;
   margin-right: 0.2rem;
   font-family: var(--fontFraktionBold);

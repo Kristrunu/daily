@@ -1,0 +1,107 @@
+
+.focus-entry {
+    color: var(--colorDark);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+  }
+
+  .entry-date {
+    margin-top: 0;
+    
+  }
+
+  .leftside__date {
+    display: flex;
+    font-size: 3rem;
+    text-align: right;
+  }
+
+  .left__container {
+    text-align: left;
+    width: 40%;
+    margin-left: 4rem;
+    margin-top: 0;
+  }
+
+  .right__container {
+    text-align: left;
+    width: 40%;
+  }
+  
+  .focus__title {
+    font-size: 1.2rem;
+    font-family: var(--fontFraktionBold);
+    margin-bottom: .5rem;
+  }
+
+  .journal__title {
+    font-size: 1.2rem;
+    font-family: var(--fontFraktionBold);
+    margin-bottom: .5rem;
+  }
+
+  
+  .focus__text {
+    font-family: var(--fontFraktionLight);
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+
+  .journal__text {
+    font-family: var(--fontFraktionLight);
+    width: 70%;
+  }
+
+.task__lists {
+    flex-direction: row;
+    text-align: left;
+    width: 40%;
+}
+
+  .task__title {
+    font-family: var(--fontFraktionBold);
+    margin-bottom: .5rem;
+  }
+  
+  .task__list {
+      margin-bottom: 3rem;
+  }
+
+  .mood__title {
+    margin-bottom: 0.7rem;
+    margin-top: 3rem;
+    font-family: var(--fontFraktionBold);
+  }
+
+  .happymood-picker {
+    display: flex;
+    height: 2.5rem;
+  }
+
+  .chosen-emoji {
+    padding: .3rem;
+  }
+
+  .chosen-emoji.icon-happiest-emoji:before {
+    color: var(--colorDark);
+    left: .6rem;
+  }
+
+  .e-b-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4rem 8rem;
+  }
+
+  .edit-button {
+    margin-right: 2rem;
+  }
+
+  .edit-button.icon-edit-icon:before {
+    font-size: 1.2rem;
+  }
+
+  .back-button.icon-x-icon:before {
+    font-size: 1.2rem;
+  }

@@ -18,9 +18,6 @@ const Dashboard = () => {
         }
     }, [user, navigate]);
 
-   
-    const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
-
 
 
     return (
@@ -34,13 +31,11 @@ const Dashboard = () => {
                 </>
             ) : (
                 <>
+
                     <NewToDo />
-                    <div className="todos">
+                    <div className="entry-list">
                         {incompleteToDos.map((toDo) => (  
-                            <>
-                            
                             <ToDoCard toDo={toDo} key={toDo._id} />
-                            </>
                         ))}
                     </div>
                 </> 

@@ -17,8 +17,8 @@ const NewToDo = () => {
     }
 
     return (
-        <form className="new" onSubmit={onSubmit}>
-            <textarea className="new-input"
+        <form className="new-entry" onSubmit={onSubmit}>
+            <textarea className="new-entry__input"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
             />
