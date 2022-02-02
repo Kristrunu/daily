@@ -73,8 +73,8 @@ const EntryCard = ({ entry }) => {
             </div>
 
             <div className="entry__content">
-                <input
-                    type="text"
+                <textarea
+                className="entry-text"
                     ref={input}
                     value={content}
                     readOnly={!editing}
