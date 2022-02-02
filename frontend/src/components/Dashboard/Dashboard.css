@@ -30,12 +30,9 @@
 .date {
   font-size: 3rem;
   font-family: var(--fontBelleHeavy);
-
 }
 
 .monthname {
   font-size: 1.2rem;
   font-family: var(--fontFraktionBold);
- 
-  
 }
