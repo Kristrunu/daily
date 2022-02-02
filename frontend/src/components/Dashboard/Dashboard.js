@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
 import { useNavigate } from "react-router-dom";
-import EntryCard from "../ToDoCard/ToDoCard";
+import EntryCard from "../EntryCard/EntryCard";
 import EmptyState from "../EmptyState/EmptyState"
-import NewEntry from "../NewToDo/NewToDo";
+import NewEntry from "../NewEntry/NewEntry";
 import './Dashboard.css';
 
 

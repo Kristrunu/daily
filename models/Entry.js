@@ -11,14 +11,6 @@ const EntrySchema = new Schema(
        type: String,
        require: true
     },
-
-    // complete: {
-    //   type: Boolean, 
-    //   default: false,
-    // },
-    // completedAt: {
-    //   type: Date, 
-    // }
 },
   {
   timestamps: true
