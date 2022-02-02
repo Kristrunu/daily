@@ -27,7 +27,6 @@
   padding: .5rem;
   font-family: var(--fontFraktionBold);
   font-size: 1rem;
-  /*padding: 0.8rem 15rem;*/
   height: 5rem;
   background-color: var(--colorPrimary);
   margin: 1rem 0;
@@ -36,8 +35,4 @@
 .add-btn {
   float: right;
   border: 1px solid var(--colorDark);
-}
-
-.add-btn:hover {
-  border: 1px solid var(--colorPrimary);
 }

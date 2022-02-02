@@ -28,4 +28,5 @@
 .btn-light:hover {
   background-color: var(--colorDark);
   color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
 }
