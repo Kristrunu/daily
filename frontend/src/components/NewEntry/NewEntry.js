@@ -20,14 +20,14 @@ const NewEntry = () => {
 
     return (
         <form className="new-entry" onSubmit={onSubmit}>
-            <div className="all-input-field">
-                <label className="entry-title">New Journal Entry</label>
+            <div className="new-entry__wrap">
+                <label className="new-entry__title">New Journal Entry</label>
                 <textarea className="new-entry__input"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 />
                 <div className="add-btn">
-                <Button btnClass="btn-light btn-large icon-plus-icon" text="Add" type="submit" disabled={content.length === 0}/>
+                <Button btnClass="btn-light btn-large icon-plus-icon" text="Add Entry" type="submit" disabled={content.length === 0}/>
                 </div>
             </div>
         </form>
