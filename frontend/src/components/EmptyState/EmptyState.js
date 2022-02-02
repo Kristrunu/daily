@@ -8,11 +8,7 @@ const EmptyState = () => {
         <div className="empty-headline">
             <h1 className="empty-h1">No Journal Entries Yet</h1>
             <p className="empty-h2">Create Your First Memory Today!</p>
-          
-          
-            <Button
-            btnClass="btn-dark btn-large icon-plus-icon"
-            text="New Entry"/>
+        
         </div>
         <EmptyImg className="empty-svg" />
     </div>
