@@ -1,11 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import "./Entry.css";
 
 const Entry = ({ entry }) => {
-  const [focusEntry, setFocusEntry] = React.useState("");
-  const [journalEntry, setJournalEntry] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
-  const [errors, setErrors] = React.useState({});
+  const [focusEntry, setFocusEntry] = useState("");
+  const [journalEntry, setJournalEntry] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
   return (
     <div className="entry">

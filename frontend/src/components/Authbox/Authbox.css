@@ -1,7 +1,7 @@
 .auth {
   display: flex;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height:100vh;
   min-height: 520px;
   background-color: var(--colorWhite);
 }
@@ -17,6 +17,7 @@
 .auth__box--right {
   background-color: var(--colorPrimary);
 }
+
 
 .logo {
   position: absolute;
@@ -122,4 +123,16 @@
   margin-bottom: 1rem;
   text-align: center;
   font-size: 1.25rem;
+}
+
+
+/* Media queries */
+@media (max-width: 900px) {
+  .auth__box--right {
+    display:none;
+  }
+  .auth__box--left {
+    width: 100%;
+  }
+
 }

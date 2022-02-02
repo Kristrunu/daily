@@ -9,9 +9,10 @@ const Header = () => {
   return (
 
     <header>
-      <Link to="/">
-        <h1 className="daily-h1">DAILY</h1>
-      </Link>
+      <div className="header__logo">
+        {user ? (<h1 className="daily-h1">DAILY</h1>) : ('')}
+      </div>
+      
       <div className="btns">
         {user ? (
           <Button 

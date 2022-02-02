@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 import "./NewEntry.css";
 
 
@@ -16,7 +16,7 @@ const NewEntry = () => {
                     <label className="entry-label" htmlFor="focus"> Today I Will Focus On.. </label>
                     <textarea className="entry-input" name="focus" id="focus" cols="30" rows="7"/>
                 </div>
-
+                
                 <div className="tasks-section">
                     <div className="tasks">
                         <label className="entry-label" htmlFor="tasks"> Tasks For The Day </label>

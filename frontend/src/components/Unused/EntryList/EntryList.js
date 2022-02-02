@@ -1,6 +1,6 @@
 import "./EntryList.css";
 import Entry from "../Entry/Entry";
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 
 const EntryList = ({ entryList }) => {
   return (
