@@ -3,16 +3,16 @@ import { useState } from 'react';
 import { useGlobalContext } from "../../context/GlobalContext";
 import './NewToDo.css'
 
-const NewToDo = () => {
+const NewEntry = () => {
     const [content, setContent] = useState('');
-    const { addToDo } = useGlobalContext();
+    const { addEntry } = useGlobalContext();
 
     const onSubmit = e => {
         e.preventDefault();
 
         axios.post('/api/entry/new', {content}).then(res => {
             setContent('');
-            addToDo(res.data);
+            addEntry(res.data);
         })
     }
 
@@ -29,4 +29,4 @@ const NewToDo = () => {
     );
 };
 
-export default NewToDo;
+export default NewEntry;

@@ -5,7 +5,7 @@ import axios from 'axios';
 const initialState = {
     user: null,
     fetchingUser: true,
-    incompleteToDos: [],
+    entries: [],
 }
 
 // reducer
@@ -17,16 +17,16 @@ const globalReducer = (state, action) => {
                 user: action.payload,
                 fetchingUser: false,
             };
-        case "SET_INCOMPLETE_TODOS":
+        case "SET_ENTRIES":
             return {
                 ...state,
-                incompleteToDos: action.payload,
+                entries: action.payload,
             };
         case "RESET_USER":
             return {
                 ...state,
                 user: null,
-                incompleteToDos: [],
+                entries: [],
                 fetchingUser: false,
             };
         default:
@@ -51,16 +51,16 @@ export const GlobalProvider = (props) => {
             const res = await axios.get("/api/auth/current");
         
             if (res.data) {
-                const toDosRes = await axios.get("/api/entry/current");
+                const entriesRes = await axios.get("/api/entry/current");
         
-                if (toDosRes.data) {
+                if (entriesRes.data) {
                     dispatch({ 
                         type: "SET_USER", 
                         payload: res.data 
                     });
                     dispatch({
-                        type: "SET_INCOMPLETE_TODOS",
-                        payload: toDosRes.data.incomplete,
+                        type: "SET_ENTRIES",
+                        payload: entriesRes.data.entries,
                     });
                 }
             } else {
@@ -83,30 +83,30 @@ export const GlobalProvider = (props) => {
         }
     };
 
-    const addToDo = (toDo) => {
+    const addEntry = (entry) => {
         dispatch({
-            type: "SET_INCOMPLETE_TODOS",
-            payload: [toDo, ...state.incompleteToDos],
+            type: "SET_ENTRIES",
+            payload: [entry, ...state.entries],
         });
     };
 
-    const removeToDo = (toDo) => {
+    const removeEntry = (entry) => {
         dispatch({
-            type: "SET_INCOMPLETE_TODOS",
-            payload: state.incompleteToDos.filter(
-                (incompleteToDo) => incompleteToDo._id !== toDo._id
+            type: "SET_ENTRIES",
+            payload: state.entries.filter(
+                (removeEntry) => removeEntry._id !== entry._id
             ),
         });
     };
 
-    const updateToDo = (toDo) => {
-        const newIncompleteToDos = state.incompleteToDos.map((incompleteToDo) =>
-            incompleteToDo._id !== toDo._id ? incompleteToDo : toDo
+    const updateEntry = (entry) => {
+        const newEntries = state.entries.map(
+            (updateEntry) => updateEntry._id !== entry._id ? updateEntry : entry
         );
     
         dispatch({
-            type: "SET_INCOMPLETE_TODOS",
-            payload: newIncompleteToDos,
+            type: "SET_ENTRIES",
+            payload: newEntries,
         });
     };
 
@@ -114,9 +114,9 @@ export const GlobalProvider = (props) => {
         ...state,
         getCurrentUser,
         logout,
-        addToDo,
-        removeToDo,
-        updateToDo,
+        addEntry,
+        removeEntry,
+        updateEntry,
     };
     
     return (

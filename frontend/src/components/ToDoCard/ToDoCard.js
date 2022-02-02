@@ -4,11 +4,11 @@ import { useGlobalContext } from "../../context/GlobalContext";
 import './ToDoCard.css';
 import '../Button/Button.css';
 
-const ToDoCard = ({ toDo }) => {
-    const [content, setContent] = useState(toDo.content);
+const EntryCard = ({ entry }) => {
+    const [content, setContent] = useState(entry .content);
     const [editing, setEditing] = useState(false);
     const input = useRef(null);
-    const { removeToDo, updateToDo } = useGlobalContext();
+    const { removeEntry, updateEntry } = useGlobalContext();
 
     const onEdit = (e) => {
         e.preventDefault();
@@ -23,26 +23,26 @@ const ToDoCard = ({ toDo }) => {
         }
     
         setEditing(false);
-        setContent(toDo.content);
+        setContent(entry.content);
     };
 
-    const deleteToDo = (e) => {
+    const deleteEntry = (e) => {
         e.preventDefault();
     
         if (window.confirm("Are you sure you want to delete this ToDo?")) {
-            axios.delete(`/api/entry/${toDo._id}`).then(() => {
-                removeToDo(toDo);
+            axios.delete(`/api/entry/${entry._id}`).then(() => {
+                removeEntry(entry);
             });
         }
     };
 
-    const editToDo = (e) => {
+    const editEntry = (e) => {
         e.preventDefault();
     
         axios
-            .put(`/api/entry/${toDo._id}`, { content })
+            .put(`/api/entry/${entry._id}`, { content })
             .then((res) => {
-                updateToDo(res.data);
+                updateEntry(res.data);
                 setEditing(false);
             })
             .catch(() => {
@@ -56,8 +56,8 @@ const ToDoCard = ({ toDo }) => {
         
         <div className="entry">
             <div class="entry__date">
-                <p class="monthname">{months[new Date(toDo.createdAt).getMonth()]}</p>
-                <p class="date" >{(new Date(toDo.createdAt).getDate() < 10 ? '0' : " ") + (new Date(toDo.createdAt).getDate())}</p>
+                <p className="monthname">{months[new Date(entry.createdAt).getMonth()]}</p>
+                <p className="date" >{(new Date(entry.createdAt).getDate() < 10 ? '0' : " ") + (new Date(entry.createdAt).getDate())}</p>
             </div>
 
             <div className="entry__content">
@@ -73,12 +73,12 @@ const ToDoCard = ({ toDo }) => {
                     {!editing ? (
                         <>
                             <button className="btn" onClick={onEdit}>Edit</button>
-                            <button className="btn" onClick={deleteToDo}>Delete</button>
+                            <button className="btn" onClick={deleteEntry}>Delete</button>
                         </>
                     ) : (
                         <>
                             <button className="btn" onClick={stopEditing}>Cancel</button>
-                            <button className="btn" onClick={editToDo}>Save</button>
+                            <button className="btn" onClick={editEntry}>Save</button>
                         </>
                     )}
                 </div>
@@ -88,4 +88,4 @@ const ToDoCard = ({ toDo }) => {
     );
 };
 
-export default ToDoCard;
+export default EntryCard;

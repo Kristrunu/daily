@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
 import { useNavigate } from "react-router-dom";
-import ToDoCard from "../ToDoCard/ToDoCard";
+import EntryCard from "../ToDoCard/ToDoCard";
 import EmptyState from "../EmptyState/EmptyState"
-import NewToDo from "../NewToDo/NewToDo";
+import NewEntry from "../NewToDo/NewToDo";
 import './Dashboard.css';
 
 
 
 const Dashboard = () => {
-    const { user, incompleteToDos } = useGlobalContext();
+    const { user, entries } = useGlobalContext();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,18 +24,18 @@ const Dashboard = () => {
    
 
         <div className="dashboard">
-            {incompleteToDos.length === 0 ? (
+            {entries.length === 0 ? (
                 <>
-                    <NewToDo />
+                    <NewEntry />
                     <EmptyState /> 
                 </>
             ) : (
                 <>
 
-                    <NewToDo />
+                    <NewEntry />
                     <div className="entry-list">
-                        {incompleteToDos.map((toDo) => (  
-                            <ToDoCard toDo={toDo} key={toDo._id} />
+                        {entries.map((entry) => (  
+                            <EntryCard entry={entry} key={entry._id} />
                         ))}
                     </div>
                 </> 

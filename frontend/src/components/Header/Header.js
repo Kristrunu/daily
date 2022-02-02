@@ -13,12 +13,14 @@ const Header = () => {
         {user ? (<h1 className="daily-h1">DAILY</h1>) : ('')}
       </div>
       
+
       <div className="btns">
         {user ? (
           <Button 
             btnClass="btn-light icon-logout-icon" 
             text="Log Out" onClick={ logout } 
           />
+          
         ) : pathname === "/" ? (
           <Link to="/register" className="btn">Sign Up</Link>
         ) : (

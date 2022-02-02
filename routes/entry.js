@@ -51,17 +51,12 @@ router.post("/new", requiresAuth, async (req, res) => {
 
 router.get("/current", requiresAuth, async (req, res) => {
   try {
-    const completeEntry = await Entry.find({
-        user: req.user._id,
-        complete: true, 
-      }).sort({ completeAt: -1 })
-
-      const incompleteEntry = await Entry.find({
+      const entry = await Entry.find({
         user: req.user._id,
         complete: false,
       }).sort({ createdAt: -1 });
 
-    return res.json({incomplete: incompleteEntry, complete: completeEntry});
+    return res.json({entries: entry});
 
   } catch(err) {
     console.log(err);
