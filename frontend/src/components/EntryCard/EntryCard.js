@@ -68,13 +68,13 @@ const EntryCard = ({ entry }) => {
         
         <div className="entry">
             <div class="entry__date">
-                <p className="monthname">{months[new Date(entry.createdAt).getMonth()]}</p>
                 <p className="date" >{(new Date(entry.createdAt).getDate() < 10 ? '0' : " ") + (new Date(entry.createdAt).getDate())}</p>
+                <p className="monthname">{months[new Date(entry.createdAt).getMonth()]}</p>
             </div>
 
             <div className="entry__content">
-                <input
-                    type="text"
+                <textarea
+                className="entry-text"
                     ref={input}
                     value={content}
                     readOnly={!editing}
