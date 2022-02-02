@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useRef, useState } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
-import './ToDoCard.css';
-import '../Button/Button.css';
+import Button from "../Button/Button";
+import "./ToDoCard.css";
 
 const EntryCard = ({ entry }) => {
     const [content, setContent] = useState(entry .content);
@@ -12,9 +12,8 @@ const EntryCard = ({ entry }) => {
 
     const onEdit = (e) => {
         e.preventDefault();
-    
-        setEditing(true);
-        input.current.focus();
+        setEditing(true)
+        input.current.focus()
     };
 
     const stopEditing = (e) => {
@@ -29,7 +28,7 @@ const EntryCard = ({ entry }) => {
     const deleteEntry = (e) => {
         e.preventDefault();
     
-        if (window.confirm("Are you sure you want to delete this ToDo?")) {
+        if (window.confirm("Are you sure you want to delete this Entry?")) {
             axios.delete(`/api/entry/${entry._id}`).then(() => {
                 removeEntry(entry);
             });
@@ -48,9 +47,22 @@ const EntryCard = ({ entry }) => {
             .catch(() => {
                 stopEditing();
             });
-    };
+        };
 
-    const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
     return (
         
@@ -71,21 +83,22 @@ const EntryCard = ({ entry }) => {
         
                 <div className="entry__controls">
                     {!editing ? (
-                        <>
-                            <button className="btn" onClick={onEdit}>Edit</button>
-                            <button className="btn" onClick={deleteEntry}>Delete</button>
-                        </>
-                    ) : (
-                        <>
-                            <button className="btn" onClick={stopEditing}>Cancel</button>
-                            <button className="btn" onClick={editEntry}>Save</button>
-                        </>
+                         <>
+                         <Button text="Edit" onClick={onEdit} />
+                         <Button text="Delete" onClick={deleteEntry} />
+                       </>
+                     ) : (
+                       <>
+                         <Button text="Save" onClick={editEntry} />
+                         <Button text="Cancel" onClick={stopEditing} />
+                       </>
                     )}
                 </div>
             </div>
-        </div>
-       
-    );
+    
+      </div>
+   
+  );
 };
 
 export default EntryCard;

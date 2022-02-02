@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useGlobalContext } from "../../context/GlobalContext";
 import './NewToDo.css'
+import Button from '../Button/Button';
 
 const NewEntry = () => {
     const [content, setContent] = useState('');
@@ -18,13 +19,16 @@ const NewEntry = () => {
 
     return (
         <form className="new-entry" onSubmit={onSubmit}>
-            <textarea className="new-entry__input"
+            <div className="all-input-field">
+                <label className="entry-title">New Journal Entry</label>
+                <textarea className="new-entry__input"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-            />
-            <button className="btn-dark btn-large icon-plus-icon" type="submit" disabled={content.length === 0}>
-                Add
-            </button>
+                />
+                <div className="add-btn">
+                <Button btnClass="btn-light btn-large icon-plus-icon" text="Add" type="submit" disabled={content.length === 0}/>
+                </div>
+            </div>
         </form>
     );
 };
