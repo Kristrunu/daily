@@ -12,19 +12,24 @@
 
 .entry:hover {
   transform: scale(1.02);
-  cursor: pointer;
 }
 
 .entry__content {
   font-family: var(--fontFraktionLight);
-  text-align: left;
+  display: flex;
+  flex-direction: column;
   width: 40%;
 }
 
-.entry__title {
-  font-size: 1.2rem;
-  font-family: var(--fontFraktionBold);
-  margin-bottom: .5rem;
+.entry-text {
+  border: none;
+  background-color: var(--colorPrimary);
+  line-height: 1.3rem;
+  height: 9rem;
+}
+
+textarea {
+  resize: none;
 }
 
 .entry__date {
@@ -32,7 +37,14 @@
   font-family: var(--fontBelleHeavy);
   width: 30%;
   text-align: right;
-  padding: 1rem 0 1rem 4rem;
+  padding: 1rem 4rem 1rem 4rem;
+  letter-spacing: 0.3rem;
+}
+
+.monthname {
+  font-size: 1.5rem;
+  font-family: var(--fontFraktionLight);
+  letter-spacing: 0.5rem;
 }
 
 .entry:nth-child(even) .entry__date {
@@ -40,26 +52,21 @@
   text-align: left;
 }
 
-.entry:nth-child(even) .entry__content {
-  text-align: right;
+.entry:nth-child(even) .entry__content .entry__controls {
+  align-self: flex-end;
 }
-
-
 
 .entry__controls {
   display: flex;
   margin-top: 0.5rem;
-  align-self: flex-end;
 }
-
 
 .entry__controls button:not(:last-child) {
   margin-right: 10px;
 }
 
 .entry__controls button:hover {
-  cursor: pointer;
-  opacity: 0.6;
+  border: 1px solid var(--colorDark);
+  color: var(--colorDark);
+  background-color: var(--colorPrimary);
 }
-
-
