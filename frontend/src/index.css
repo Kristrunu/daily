@@ -78,6 +78,13 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  min-width: 280px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 html,
 body,
 #root {

@@ -10,17 +10,8 @@
   text-decoration: none;
   transition: all ease 0.3s;
 }
-.btn[class^="icon-"],
-.btn[class*=" icon-"] {
-  padding-left: 3rem;
-}
 
 .btn-light {
-  background-color: var(--colorPrimary);
-  color: var(--colorDark);
-}
-
-.btn-dark:hover {
   background-color: var(--colorPrimary);
   color: var(--colorDark);
 }
@@ -29,4 +20,39 @@
   background-color: var(--colorDark);
   color: var(--colorPrimary);
   border: 1px solid var(--colorPrimary);
+}
+
+.btn-dark:hover {
+  background-color: var(--colorPrimary);
+  color: var(--colorDark);
+}
+
+.btn-large {
+  font-size: 1rem;
+}
+
+.btn-large.icon-plus-icon:before {
+  font-size: 1rem;
+  left: 1rem;
+}
+
+.btn[class^="icon-"],
+.btn[class*=" icon-"] {
+  padding-left: 3rem;
+}
+
+@media (min-width: 1023px) {
+  .btn-large,
+  .btn-large.icon-plus-icon:before {
+    font-size: 1.2rem;
+  }
+
+  .btn-large.icon-plus-icon:before {
+    left: 1rem;
+  }
+
+  .btn-large[class^="icon-"],
+  .btn-large[class*=" icon-"] {
+    padding: 0.5rem 1rem 0.5rem 3rem;
+  }
 }

@@ -14,6 +14,22 @@ header {
 }
 
 header h1 {
-  font-size: 4rem;
-  letter-spacing: .2rem;
+  font-size: clamp(2.25rem, 1.76rem + 2.8vw, 4rem);
+  letter-spacing: 0.2rem;
+}
+
+.btns__logged-in {
+  display: flex;
+}
+
+.user {
+  position: relative;
+  margin-right: 1.5rem;
+  padding: 1rem 1rem 1rem 2rem;
+  color: var(--colorPrimary);
+}
+
+.user.icon-user-icon:before {
+  font-size: 1.5rem;
+  left: 0;
 }

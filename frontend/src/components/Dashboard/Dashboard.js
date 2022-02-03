@@ -6,8 +6,6 @@ import EmptyState from "../EmptyState/EmptyState"
 import NewEntry from "../NewEntry/NewEntry";
 import './Dashboard.css';
 
-
-
 const Dashboard = () => {
     const { user, entries } = useGlobalContext();
     const navigate = useNavigate();
@@ -18,16 +16,12 @@ const Dashboard = () => {
         }
     }, [user, navigate]);
 
-
-
     return (
-   
-
         <div className="dashboard">
             {entries.length === 0 ? (
                 <>
                     <NewEntry />
-                    <EmptyState /> 
+                    {user ? (<EmptyState userName={user.name}/>) : (<EmptyState />)}
                 </>
             ) : (
                 <>

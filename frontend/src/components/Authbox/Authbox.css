@@ -31,7 +31,9 @@
 /*<div> hugging all left side*/
 .auth__box--left {
   flex-direction: column;
-  padding: 5%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
   color: var(--colorDark);
 }
 
@@ -125,7 +127,7 @@
 }
 
 /* Media queries */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .auth__box--right {
     display: none;
   }

@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import "./EntryCard.css";
 
 const EntryCard = ({ entry }) => {
-    const [content, setContent] = useState(entry .content);
+    const [content, setContent] = useState(entry.content);
     const [editing, setEditing] = useState(false);
     const input = useRef(null);
     const { removeEntry, updateEntry } = useGlobalContext();
@@ -67,14 +67,14 @@ const EntryCard = ({ entry }) => {
     return (
         
         <div className="entry">
-            <div class="entry__date">
+            <div className="entry__date">
                 <p className="date" >{(new Date(entry.createdAt).getDate() < 10 ? '0' : " ") + (new Date(entry.createdAt).getDate())}</p>
                 <p className="monthname">{months[new Date(entry.createdAt).getMonth()]}</p>
             </div>
 
             <div className="entry__content">
                 <textarea
-                className="entry-text"
+                    className="entry__text"
                     ref={input}
                     value={content}
                     readOnly={!editing}

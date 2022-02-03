@@ -16,11 +16,13 @@ const Header = () => {
 
       <div className="btns">
         {user ? (
-          <Button 
-            btnClass="btn-light icon-logout-icon" 
-            text="Log Out" onClick={ logout } 
-          />
-          
+          <div className="btns__logged-in">
+            <div className="user icon-user-icon">{user.name}</div>
+            <Button 
+              btnClass="btn-light icon-logout-icon" 
+              text="Log Out" onClick={ logout } 
+            />
+          </div>
         ) : pathname === "/" ? (
           <Link to="/register" className="btn">Sign Up</Link>
         ) : (
