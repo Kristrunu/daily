@@ -1,6 +1,6 @@
 # daily
 
-@@ -1,46 +1,10 @@
+
 # Getting Started with Create React App
 # Daily Journal - MERN stack CRUD app
 
