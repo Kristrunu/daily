@@ -1,17 +1,20 @@
 const {Schema, model} = require('mongoose');
 
+// Definition for what our entry model will look like
 const EntrySchema = new Schema(
   {
-    user: {
-      type: Schema.Types.ObjectId,
+    // User property
+    user: { // Tells the database which user the entry/entries belong to
+      type: Schema.Types.ObjectId, 
       ref: "User"
     },
     
-     content: {
-       type: String,
-       require: true
+    // Content property
+    content: {
+      type: String,
+      required: true
     },
-},
+  },
   {
   timestamps: true
   }

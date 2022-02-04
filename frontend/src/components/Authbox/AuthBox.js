@@ -101,8 +101,10 @@ const AuthBox = ({ register }) => {
             <label>Password</label>
             <input 
               type="password" 
+              name="password"
               value={password} 
               onChange={e => setPassword(e.target.value)} 
+              autoComplete="on"
             />
 
               {errors.password && (
@@ -115,8 +117,10 @@ const AuthBox = ({ register }) => {
               <label>Confirm Password</label>
               <input 
                 type="password" 
+                name="confirm_password" 
                 value={confirmPassword} 
                 onChange={e => setConfirmPassword(e.target.value)}
+                autoComplete="on"
               />
 
               {errors.confirmPassword && (

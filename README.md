@@ -7,4 +7,22 @@
 
 FYI - If you clone this project you will not be able to connect to the database as the URI and Secret key are not available with this repository.
 
+## Packages used
+
+### Backend
+
+- **nodemon:** Helps with restarting the server automatically everytime we save files
+- **concurrently:** Runs the server and frontend at same time through one terminal
+- **bcrypt:** For one-way hashing function for passwords.
+- **body-parser:**
+- **cookie-parser:**
+- **cors:**
+- **dotenv:** For accessing environmental variables
+- **express:** Framework for creating the server
+- **jsonwebtoken:**
+- **mongoose:** To connect to the MongoDB database
+- **validator:**
+
+### Frontend
+
 ### Here is a link to the [live site](https://mydailyjournalapp.herokuapp.com/)
